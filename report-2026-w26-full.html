@@ -408,6 +408,247 @@
     </div>
 </section>
 
+<!-- 业务员问题询盘分布（带圆环图+明细标签） -->
+<section class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
+    <div class="p-6 border-b border-slate-800 bg-slate-900/40 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <h2 class="text-lg font-black text-white flex items-center gap-2">
+            <i class="fa-solid fa-users text-cyan-400"></i>
+            二、业务员问题询盘分布（28条全量）
+        </h2>
+        <div class="px-3 py-1.5 rounded-lg bg-cyan-400/10 border border-cyan-400/20 text-xs font-bold text-cyan-400">诊断周期：06-21 ~ 06-23</div>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6">
+        <div class="p-4 bg-slate-950/50 rounded-xl border border-slate-800">
+            <h3 class="text-xs font-bold text-slate-400 mb-4 text-center">业务员询盘分布比例</h3>
+            <div class="h-52"><canvas id="ownerDistChart"></canvas></div>
+        </div>
+        <div class="lg:col-span-2 space-y-3 max-h-80 overflow-y-auto scrollbar-custom pr-2">
+            <div class="p-4 bg-slate-950/60 rounded-xl border border-red-900/40">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="font-bold text-white">袁明宣</span>
+                    <span class="px-2 py-0.5 rounded text-[10px] font-black bg-red-900/40 text-red-400 border border-red-700/20">高危 · 4条</span>
+                </div>
+                <div class="flex gap-2 flex-wrap text-[10px]">
+                    <span class="px-2 py-0.5 rounded bg-slate-800 text-orange-400 border border-slate-700">超24h未回复 ×1</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-800 text-yellow-400 border border-slate-700">高价值买家预警 ×2</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-800 text-red-400 border border-slate-700">买家已读未回 ×1</span>
+                </div>
+            </div>
+            <div class="p-4 bg-slate-950/60 rounded-xl border border-red-900/40">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="font-bold text-white">李思贤</span>
+                    <span class="px-2 py-0.5 rounded text-[10px] font-black bg-red-900/40 text-red-400 border border-red-700/20">高危 · 4条</span>
+                </div>
+                <div class="flex gap-2 flex-wrap text-[10px]">
+                    <span class="px-2 py-0.5 rounded bg-slate-800 text-red-400 border border-slate-700">买家已读未回 ×2</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-800 text-orange-400 border border-slate-700">超24h未回复 ×2</span>
+                    <span class="px-2 py-0.5 rounded bg-yellow-900/40 text-yellow-400 border border-yellow-700/30">含L4买家 ×1</span>
+                </div>
+            </div>
+            <div class="p-4 bg-slate-950/60 rounded-xl border border-orange-900/40">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="font-bold text-white">于慧</span>
+                    <span class="px-2 py-0.5 rounded text-[10px] font-black bg-orange-900/40 text-orange-400 border border-orange-700/20">中危 · 3条</span>
+                </div>
+                <div class="flex gap-2 flex-wrap text-[10px]">
+                    <span class="px-2 py-0.5 rounded bg-slate-800 text-yellow-400 border border-slate-700">高价值买家预警 ×1</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-800 text-red-400 border border-slate-700">买家已读未回 ×1</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700">待核查 ×1</span>
+                    <span class="px-2 py-0.5 rounded bg-yellow-900/40 text-yellow-400 border border-yellow-700/30">含L4买家 ×1</span>
+                </div>
+            </div>
+            <div class="p-4 bg-slate-950/60 rounded-xl border border-yellow-900/40">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="font-bold text-white">李晴</span>
+                    <span class="px-2 py-0.5 rounded text-[10px] font-black bg-yellow-900/30 text-yellow-400 border border-yellow-700/20">中危 · 2条</span>
+                </div>
+                <div class="flex gap-2 flex-wrap text-[10px]">
+                    <span class="px-2 py-0.5 rounded bg-slate-800 text-orange-400 border border-slate-700">超24h未回复 ×2</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-800 text-blue-400 border border-slate-700">L3买家 ×2</span>
+                </div>
+            </div>
+            <div class="p-4 bg-slate-950/60 rounded-xl border border-yellow-900/40">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="font-bold text-white">李静雯</span>
+                    <span class="px-2 py-0.5 rounded text-[10px] font-black bg-yellow-900/30 text-yellow-400 border border-yellow-700/20">中危 · 2条</span>
+                </div>
+                <div class="flex gap-2 flex-wrap text-[10px]">
+                    <span class="px-2 py-0.5 rounded bg-slate-800 text-orange-400 border border-slate-700">超24h未回复 ×2</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-800 text-blue-400 border border-slate-700">L3买家 ×2</span>
+                </div>
+            </div>
+            <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="font-bold text-white">胡晓蓓 / 陈思源 / 朱信哲 / 赵锦东 / 苗璐琳 / info账号 / 司然然</span>
+                    <span class="px-2 py-0.5 rounded text-[10px] font-black bg-slate-800 text-slate-300 border border-slate-700">各1-2条</span>
+                </div>
+                <div class="text-[10px] text-slate-400">胡晓蓓2条·陈思源2条·朱信哲2条·赵锦东2条·苗璐琳2条·info账号2条·司然然1条</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 核心高危案例深度诊断 -->
+<section>
+    <div class="mb-4">
+        <h2 class="text-lg font-black text-white flex items-center gap-2">
+            <i class="fa-solid fa-microscope text-red-400"></i>
+            三、核心高危案例深度诊断（精选最高危漏洞）
+        </h2>
+        <p class="text-xs text-slate-400 mt-1">基于买家等级 + 问题类型双维度优先排序，对最高危案例进行手术刀式解剖</p>
+    </div>
+    <div class="space-y-6">
+
+        <!-- 案例1：于慧 - L4 Alexey Bobylev 高价值买家跟进停滞 -->
+        <div class="bg-slate-900 border border-yellow-500/40 rounded-2xl overflow-hidden" style="box-shadow:0 0 12px rgba(251,191,36,0.15)">
+            <div class="px-6 py-4 bg-gradient-to-r from-yellow-900/30 to-transparent border-b border-slate-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+                <div class="flex items-center gap-3">
+                    <span class="h-8 w-8 rounded bg-yellow-500 text-black font-bold flex items-center justify-center">1</span>
+                    <div>
+                        <h3 class="font-extrabold text-white">L4 俄罗斯买家 Alexey Bobylev — 高价值买家跟进停滞</h3>
+                        <p class="text-xs text-slate-400 mt-0.5">负责人：<strong class="text-slate-300">于慧（sasha Yu）</strong> · 2026-06-22</p>
+                    </div>
+                </div>
+                <span class="px-3 py-1 rounded-full text-xs font-black bg-yellow-900/40 text-yellow-300 border border-yellow-600/30">
+                    <i class="fa-solid fa-crown mr-1"></i>L4 高价值客户流失风险
+                </span>
+            </div>
+            <div class="p-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-slate-950 p-4 rounded-xl border border-slate-900 space-y-3">
+                    <div class="text-[10px] text-slate-500 text-center uppercase tracking-widest border-b border-slate-900 pb-2">当前跟进状态</div>
+                    <div class="p-3 bg-yellow-900/20 border border-yellow-700/30 rounded-lg text-xs space-y-2">
+                        <p class="text-yellow-400 font-bold"><i class="fa-solid fa-crown mr-1"></i>系统标记：高价值买家跟进预警</p>
+                        <p class="text-slate-300">买家等级：L4（最高级）· 国家：俄罗斯</p>
+                        <p class="text-slate-300">当前节点：<span class="text-orange-400 font-semibold">对话停滞·超24h无互动</span></p>
+                        <p class="text-slate-300">跟进状态：<span class="text-red-400 font-semibold">业务员未主动出击</span></p>
+                    </div>
+                    <div class="p-3 bg-red-900/20 border border-red-700/20 rounded-lg text-[11px] text-red-300">
+                        <i class="fa-solid fa-triangle-exclamation mr-1"></i>
+                        L4买家一旦转向竞争对手，挽回成本极高。系统预警后48h内必须主动触达。
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <div class="p-4 bg-yellow-950/30 border border-yellow-500/30 rounded-xl">
+                        <h4 class="text-xs font-black text-yellow-400 flex items-center gap-1.5 mb-2"><i class="fa-solid fa-virus"></i> 病理诊断：高价值买家关键信号冷处理</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">L4买家触发系统预警后，于慧未在48h内主动出击，错失建立深度信任的黄金窗口。对话停滞超24h，买家极可能正在评估其他供应商。</p>
+                    </div>
+                    <div class="p-4 bg-slate-950 border border-slate-800 rounded-xl">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-xs font-black text-green-400 flex items-center gap-1.5"><i class="fa-solid fa-shield-halved"></i> 建议跟进实战脚本</h4>
+                            <button onclick="copyScript('cs1',this)" class="text-[10px] px-2 py-1 rounded bg-slate-800 border border-slate-700 hover:bg-slate-700 transition flex items-center gap-1"><i class="fa-regular fa-copy mr-1"></i>复制</button>
+                        </div>
+                        <div class="bg-black p-3 rounded font-mono text-[11px] text-cyan-400 whitespace-pre-wrap leading-relaxed select-all" id="cs1">Hi Alexey, this is Sasha from BingYan Laser. I wanted to personally reach out as I see we haven't connected recently.
+
+As one of our valued customers, I'd like to make sure your laser equipment needs are fully addressed. Are you currently looking for any upgrades, new configurations, or have a new project in mind?
+
+We have some exciting new MOPA and CO2 models that are very popular with customers in your region. I'd love to share more details.
+
+Best regards, Sasha | BingYan Laser</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 案例2：李思贤 - L4 Vlademiro Ramos 买家已读未回 -->
+        <div class="bg-slate-900 border border-red-500/40 rounded-2xl overflow-hidden" style="box-shadow:0 0 12px rgba(255,51,102,0.15)">
+            <div class="px-6 py-4 bg-gradient-to-r from-red-950/40 to-transparent border-b border-slate-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+                <div class="flex items-center gap-3">
+                    <span class="h-8 w-8 rounded bg-red-500 text-white font-bold flex items-center justify-center">2</span>
+                    <div>
+                        <h3 class="font-extrabold text-white">L4 安哥拉买家 Vlademiro Ramos — 买家已读未回</h3>
+                        <p class="text-xs text-slate-400 mt-0.5">负责人：<strong class="text-slate-300">李思贤（Emily Li）</strong> · 2026-06-21</p>
+                    </div>
+                </div>
+                <span class="px-3 py-1 rounded-full text-xs font-black bg-red-900/40 text-red-400 border border-red-500/30">
+                    <i class="fa-solid fa-envelope-open mr-1"></i>已读未回 · 兴趣降温预警
+                </span>
+            </div>
+            <div class="p-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-slate-950 p-4 rounded-xl border border-slate-900 space-y-3">
+                    <div class="text-[10px] text-slate-500 text-center uppercase tracking-widest border-b border-slate-900 pb-2">当前跟进状态</div>
+                    <div class="p-3 bg-red-900/20 border border-red-700/20 rounded-lg text-xs space-y-2">
+                        <p class="text-red-400 font-bold"><i class="fa-solid fa-envelope-open mr-1"></i>状态：买家已读未回</p>
+                        <p class="text-slate-300">买家等级：L4（最高级）· 国家：安哥拉</p>
+                        <p class="text-slate-300">当前节点：<span class="text-red-400 font-semibold">业务员发出消息·买家已读但未回复</span></p>
+                        <p class="text-slate-300">原因分析：<span class="text-orange-400 font-semibold">❄️ 兴趣降温 / ⚙️ 信息不足</span></p>
+                    </div>
+                    <div class="p-3 bg-orange-900/20 border border-orange-700/20 rounded-lg text-[11px] text-orange-300">
+                        <i class="fa-solid fa-lightbulb mr-1"></i>
+                        买家已看到消息却不回复，说明现有内容未能触发回复动机。需要制造新价值点。
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <div class="p-4 bg-red-950/30 border border-red-500/30 rounded-xl">
+                        <h4 class="text-xs font-black text-red-400 flex items-center gap-1.5 mb-2"><i class="fa-solid fa-virus"></i> 病理诊断：兴趣降温·已读不回</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">买家已读但主动选择不回，说明现有消息未产生足够吸引力。禁止重复发送相同内容，需换一个切入角度重新激活对话。</p>
+                    </div>
+                    <div class="p-4 bg-slate-950 border border-slate-800 rounded-xl">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-xs font-black text-green-400 flex items-center gap-1.5"><i class="fa-solid fa-shield-halved"></i> 建议跟进实战脚本（兴趣激活型）</h4>
+                            <button onclick="copyScript('cs2',this)" class="text-[10px] px-2 py-1 rounded bg-slate-800 border border-slate-700 hover:bg-slate-700 transition flex items-center gap-1"><i class="fa-regular fa-copy mr-1"></i>复制</button>
+                        </div>
+                        <div class="bg-black p-3 rounded font-mono text-[11px] text-cyan-400 whitespace-pre-wrap leading-relaxed select-all" id="cs2">Hi Vlademiro, hope you're doing well!
+
+I wanted to share something new — we just launched an upgraded MOPA series with improved pulse control for color marking on aluminum and stainless steel. Several customers in Africa are already using it for jewelry and industrial marking.
+
+Would this be relevant to your business? I'd love to send you some sample marking results.
+
+Best regards, Emily | BingYan Laser</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 案例3：于慧 - L3 Marwah Alwahaibi 买家已读未回 -->
+        <div class="bg-slate-900 border border-orange-500/30 rounded-2xl overflow-hidden">
+            <div class="px-6 py-4 bg-gradient-to-r from-orange-950/30 to-transparent border-b border-slate-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+                <div class="flex items-center gap-3">
+                    <span class="h-8 w-8 rounded bg-orange-500 text-white font-bold flex items-center justify-center">3</span>
+                    <div>
+                        <h3 class="font-extrabold text-white">L3 阿曼买家 Marwah Alwahaibi — 买家已读未回</h3>
+                        <p class="text-xs text-slate-400 mt-0.5">负责人：<strong class="text-slate-300">于慧（sasha Yu）</strong> · 2026-06-21</p>
+                    </div>
+                </div>
+                <span class="px-3 py-1 rounded-full text-xs font-black bg-orange-900/40 text-orange-400 border border-orange-700/30">
+                    <i class="fa-solid fa-envelope-open mr-1"></i>已读未回 · 中高危
+                </span>
+            </div>
+            <div class="p-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-slate-950 p-4 rounded-xl border border-slate-900 space-y-3">
+                    <div class="text-[10px] text-slate-500 text-center uppercase tracking-widest border-b border-slate-900 pb-2">当前跟进状态</div>
+                    <div class="p-3 bg-orange-900/20 border border-orange-700/20 rounded-lg text-xs space-y-2">
+                        <p class="text-orange-400 font-bold"><i class="fa-solid fa-envelope-open mr-1"></i>状态：买家已读未回</p>
+                        <p class="text-slate-300">买家等级：L3 · 国家：阿曼（中东，时差-4h）</p>
+                        <p class="text-slate-300">当前节点：<span class="text-orange-400 font-semibold">业务员发出报价/信息·买家已读未回</span></p>
+                        <p class="text-slate-300">原因分析：<span class="text-yellow-400 font-semibold">💰 价格卡点 / ⏰ 时区错位</span></p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <div class="p-4 bg-orange-950/30 border border-orange-500/30 rounded-xl">
+                        <h4 class="text-xs font-black text-orange-400 flex items-center gap-1.5 mb-2"><i class="fa-solid fa-virus"></i> 病理诊断：价格卡点·时区错位</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">中东买家对价格敏感度高，已读未回大概率卡在价格或付款方式。建议在阿曼工作时间（北京时间13:00-17:00）发送，并主动提供价格弹性方案。</p>
+                    </div>
+                    <div class="p-4 bg-slate-950 border border-slate-800 rounded-xl">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-xs font-black text-green-400 flex items-center gap-1.5"><i class="fa-solid fa-shield-halved"></i> 建议跟进实战脚本（价格异议型）</h4>
+                            <button onclick="copyScript('cs3',this)" class="text-[10px] px-2 py-1 rounded bg-slate-800 border border-slate-700 hover:bg-slate-700 transition flex items-center gap-1"><i class="fa-regular fa-copy mr-1"></i>复制</button>
+                        </div>
+                        <div class="bg-black p-3 rounded font-mono text-[11px] text-cyan-400 whitespace-pre-wrap leading-relaxed select-all" id="cs3">Hi Marwah, I hope you've had a chance to review my previous message.
+
+I'd like to offer you a more flexible arrangement — for your first order, we can provide an extended payment term or a special discount. We also support T/T, L/C, and Western Union.
+
+Could you share what's holding back your decision? I want to make sure we find the best solution for you.
+
+Best regards, Sasha | BingYan Laser
+(Recommended send time: 13:00-17:00 Beijing Time)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 <!-- 贾总总复盘 -->
 <section class="bg-gradient-to-r from-slate-900 to-slate-900/50 border border-slate-800 rounded-2xl p-6 sm:p-8">
     <div class="flex gap-4 items-start">
@@ -447,7 +688,17 @@ new Chart(document.getElementById('issueChart').getContext('2d'), {
     options: { responsive:true, maintainAspectRatio:false, plugins:{ legend:{ position:'right', labels:{ color:'#94a3b8', boxWidth:8, font:{size:10} } } }, cutout:'62%' }
 });
 
-// 业务员分布
+// 业务员分布（圆环）
+new Chart(document.getElementById('ownerDistChart').getContext('2d'), {
+    type: 'doughnut',
+    data: {
+        labels: ['袁明宣','李思贤','于慧','李晴','李静雯','胡晓蓓','陈思源','朱信哲','赵锦东','苗璐琳','info','司然然'],
+        datasets: [{ data: [4,4,3,2,2,2,2,2,2,2,2,1], backgroundColor: ['#ff3366','#f97316','#f59e0b','#10b981','#4facfe','#a855f7','#06b6d4','#84cc16','#ec4899','#f472b6','#6b7280','#475569'], borderWidth: 0, hoverOffset: 4 }]
+    },
+    options: { responsive:true, maintainAspectRatio:false, plugins:{ legend:{ position:'bottom', labels:{ color:'#94a3b8', boxWidth:8, font:{size:9} } } }, cutout:'58%' }
+});
+
+// 业务员分布（柱状）
 new Chart(document.getElementById('ownerChart').getContext('2d'), {
     type: 'bar',
     data: {
