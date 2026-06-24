@@ -48,7 +48,7 @@ body { background: radial-gradient(circle at 50% 50%, #111827 0%, #070a13 100%);
     <div class="flex gap-2 text-xs flex-wrap justify-center">
       <div class="bg-slate-800/80 border border-slate-700 rounded-lg px-3 py-1.5"><p class="text-slate-400 text-[9px]">诊断周期</p><p class="font-bold text-slate-200">06-15 ~ 06-23（9天）</p></div>
       <div class="bg-slate-800/80 border border-slate-700 rounded-lg px-3 py-1.5"><p class="text-slate-400 text-[9px]">统计红线</p><p class="font-bold text-cyan-400">24h · 全等级 · 四层过滤</p></div>
-      <div class="bg-slate-800/80 border border-red-500/30 rounded-lg px-3 py-1.5"><p class="text-slate-400 text-[9px]">过滤后问题</p><p class="font-bold text-red-400 text-base">57 条</p></div>
+      <div class="bg-slate-800/80 border border-red-500/30 rounded-lg px-3 py-1.5"><p class="text-slate-400 text-[9px]">过滤后问题</p><p class="font-bold text-red-400 text-base">37 条</p></div>
     </div>
   </div>
 </header>
@@ -73,7 +73,8 @@ body { background: radial-gradient(circle at 50% 50%, #111827 0%, #070a13 100%);
       <p class="text-base font-bold text-white leading-relaxed">
         06-15至06-23共扫描 <span class="text-slate-400 font-black">97</span> 条原始记录，
         排除成交/复购/注销/垃圾询价 <span class="text-slate-400 font-black">30</span> 条后，
-        实际问题询盘 <span class="text-red-400 font-black text-2xl">57</span> 条，
+        实际问题询盘 <span class="text-red-400 font-black text-2xl">37</span> 条，
+        高意向买家唤醒 <span class="text-yellow-400 font-black text-xl">20</span> 条，
         低质量回复预警 <span class="text-orange-400 font-black text-xl">5</span> 条。
       </p>
     </div>
@@ -87,14 +88,14 @@ body { background: radial-gradient(circle at 50% 50%, #111827 0%, #070a13 100%);
       <i class="fa-solid fa-triangle-exclamation text-red-400"></i>
       <span class="text-[9px] text-slate-500 font-bold uppercase">问题明细</span>
     </div>
-    <div class="text-2xl font-black text-red-400 leading-none mb-2">57 <span class="text-xs font-normal text-slate-400">条</span></div>
+    <div class="text-2xl font-black text-red-400 leading-none mb-2">37 <span class="text-xs font-normal text-slate-400">条</span></div>
     <div class="space-y-1.5 text-[11px]">
-      <div class="flex justify-between"><span class="text-slate-300 flex items-center gap-1"><span class="h-1.5 w-1.5 rounded-full bg-slate-400 inline-block"></span>高价值买家预警</span><span class="font-black text-slate-300">20</span></div><div class="flex justify-between"><span class="text-slate-300 flex items-center gap-1"><span class="h-1.5 w-1.5 rounded-full bg-slate-400 inline-block"></span>买家未回</span><span class="font-black text-slate-300">18</span></div><div class="flex justify-between"><span class="text-slate-300 flex items-center gap-1"><span class="h-1.5 w-1.5 rounded-full bg-slate-400 inline-block"></span>超24h未回复</span><span class="font-black text-slate-300">19</span></div>
+      <div class="flex justify-between"><span class="text-slate-300 flex items-center gap-1"><span class="h-1.5 w-1.5 rounded-full bg-slate-400 inline-block"></span>买家未回</span><span class="font-black text-slate-300">18</span></div><div class="flex justify-between"><span class="text-slate-300 flex items-center gap-1"><span class="h-1.5 w-1.5 rounded-full bg-slate-400 inline-block"></span>超24h未回复</span><span class="font-black text-slate-300">19</span></div>
     </div>
   </div>
   <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 flex flex-col gap-1.5">
     <i class="fa-solid fa-users text-blue-400 text-lg"></i>
-    <div class="text-3xl font-black text-blue-400">13</div>
+    <div class="text-3xl font-black text-blue-400">12</div>
     <div class="text-xs text-slate-400">涉及业务员</div>
   </div>
   <div class="bg-slate-900 border border-yellow-500/25 rounded-xl p-4 flex flex-col gap-1.5">
@@ -104,12 +105,12 @@ body { background: radial-gradient(circle at 50% 50%, #111827 0%, #070a13 100%);
   </div>
   <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 flex flex-col gap-1.5">
     <i class="fa-solid fa-user-group text-blue-300 text-lg"></i>
-    <div class="text-3xl font-black text-blue-300">27</div>
+    <div class="text-3xl font-black text-blue-300">8</div>
     <div class="text-xs text-slate-400">L3买家问题</div>
   </div>
   <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 flex flex-col gap-1.5">
     <i class="fa-solid fa-user text-slate-400 text-lg"></i>
-    <div class="text-3xl font-black text-slate-300">30</div>
+    <div class="text-3xl font-black text-slate-300">29</div>
     <div class="text-xs text-slate-400">L0-L2买家问题</div>
   </div>
 </section>
@@ -134,17 +135,17 @@ body { background: radial-gradient(circle at 50% 50%, #111827 0%, #070a13 100%);
 <section class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
   <div class="p-5 border-b border-slate-800 bg-slate-900/50 flex items-center justify-between">
     <h2 class="text-base font-black text-white flex items-center gap-2"><i class="fa-solid fa-users text-cyan-400"></i> 一、业务员问题询盘分布</h2>
-    <span class="text-[10px] text-slate-400">57条 · 9天全量</span>
+    <span class="text-[10px] text-slate-400">37条 · 9天全量</span>
   </div>
   <div class="p-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-    <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between items-center mb-1"><span class="font-bold text-white text-sm">李思贤</span><span class="text-red-400 font-black">15条</span></div></div><div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between items-center mb-1"><span class="font-bold text-white text-sm">朱信哲</span><span class="text-red-400 font-black">6条</span></div></div><div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between items-center mb-1"><span class="font-bold text-white text-sm">司然然</span><span class="text-red-400 font-black">5条</span></div></div><div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between items-center mb-1"><span class="font-bold text-white text-sm">胡晓蓓</span><span class="text-red-400 font-black">5条</span></div></div><div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between items-center mb-1"><span class="font-bold text-white text-sm">赵锦东</span><span class="text-red-400 font-black">4条</span></div></div><div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between items-center mb-1"><span class="font-bold text-white text-sm">许晓媛</span><span class="text-red-400 font-black">4条</span></div></div><div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between items-center mb-1"><span class="font-bold text-white text-sm">李晴</span><span class="text-red-400 font-black">3条</span></div></div><div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between items-center mb-1"><span class="font-bold text-white text-sm">袁明宣</span><span class="text-red-400 font-black">3条</span></div></div><div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between items-center mb-1"><span class="font-bold text-white text-sm">苗璐琳</span><span class="text-red-400 font-black">3条</span></div></div><div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between items-center mb-1"><span class="font-bold text-white text-sm">于慧</span><span class="text-red-400 font-black">3条</span></div></div><div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between items-center mb-1"><span class="font-bold text-white text-sm">李静雯</span><span class="text-red-400 font-black">3条</span></div></div><div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between items-center mb-1"><span class="font-bold text-white text-sm">陈思源</span><span class="text-red-400 font-black">2条</span></div></div><div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between items-center mb-1"><span class="font-bold text-white text-sm">info</span><span class="text-red-400 font-black">1条</span></div></div>
+    <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between items-center mb-1"><span class="font-bold text-white text-sm">李思贤</span><span class="text-red-400 font-black">13条</span></div></div><div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between items-center mb-1"><span class="font-bold text-white text-sm">朱信哲</span><span class="text-red-400 font-black">5条</span></div></div><div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between items-center mb-1"><span class="font-bold text-white text-sm">许晓媛</span><span class="text-red-400 font-black">3条</span></div></div><div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between items-center mb-1"><span class="font-bold text-white text-sm">司然然</span><span class="text-red-400 font-black">3条</span></div></div><div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between items-center mb-1"><span class="font-bold text-white text-sm">赵锦东</span><span class="text-red-400 font-black">2条</span></div></div><div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between items-center mb-1"><span class="font-bold text-white text-sm">袁明宣</span><span class="text-red-400 font-black">2条</span></div></div><div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between items-center mb-1"><span class="font-bold text-white text-sm">苗璐琳</span><span class="text-red-400 font-black">2条</span></div></div><div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between items-center mb-1"><span class="font-bold text-white text-sm">陈思源</span><span class="text-red-400 font-black">2条</span></div></div><div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between items-center mb-1"><span class="font-bold text-white text-sm">李静雯</span><span class="text-red-400 font-black">2条</span></div></div><div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between items-center mb-1"><span class="font-bold text-white text-sm">于慧</span><span class="text-red-400 font-black">1条</span></div></div><div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between items-center mb-1"><span class="font-bold text-white text-sm">胡晓蓓</span><span class="text-red-400 font-black">1条</span></div></div><div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between items-center mb-1"><span class="font-bold text-white text-sm">info</span><span class="text-red-400 font-black">1条</span></div></div>
   </div>
 </section>
 
 <!-- 二、全量明细 -->
 <section class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
   <div class="p-5 border-b border-slate-800 bg-slate-900/50 flex items-center justify-between">
-    <h2 class="text-base font-black text-white flex items-center gap-2"><i class="fa-solid fa-table-list text-cyan-400"></i> 二、全量问题买家明细（57条，按等级排序）</h2>
+    <h2 class="text-base font-black text-white flex items-center gap-2"><i class="fa-solid fa-table-list text-cyan-400"></i> 二、全量问题买家明细（37条，按等级排序）</h2>
     <span class="text-[10px] text-green-400 bg-green-900/20 px-2 py-1 rounded border border-green-700/20">已排除30条</span>
   </div>
   <div class="overflow-x-auto scrollbar-custom">
@@ -162,196 +163,6 @@ body { background: radial-gradient(circle at 50% 50%, #111827 0%, #070a13 100%);
         </tr>
       </thead>
       <tbody class="divide-y divide-slate-800/50">
-        <tr class="hover:bg-slate-800/20 bg-slate-900/20">
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black badge-l3">L3</span></td>
-          <td class="px-4 py-3"><span class="font-semibold text-white">Gonzalo Veizaga</span><span class="ml-2 text-[10px] text-slate-500"></span></td>
-          <td class="px-4 py-3 text-slate-300 whitespace-nowrap">李晴</td>
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-400 border border-yellow-700/20 text-[10px]">高价值买家预警</span></td>
-          <td class="px-4 py-3 text-slate-400 text-[10px]">高价值买家系统预警 · 06-15</td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-yellow-400 whitespace-nowrap">高价值预警·待触达</span></td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-cyan-400">48h内主动发新品介绍，询问采购需求</span></td>
-          <td class="px-4 py-3 text-slate-400 whitespace-nowrap">06-15</td>
-        </tr>
-        <tr class="hover:bg-slate-800/20 bg-slate-900/20">
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black badge-l3">L3</span></td>
-          <td class="px-4 py-3"><span class="font-semibold text-white">Hak Kheng</span><span class="ml-2 text-[10px] text-slate-500"></span></td>
-          <td class="px-4 py-3 text-slate-300 whitespace-nowrap">李思贤</td>
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-400 border border-yellow-700/20 text-[10px]">高价值买家预警</span></td>
-          <td class="px-4 py-3 text-slate-400 text-[10px]">高价值买家系统预警 · 06-15</td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-yellow-400 whitespace-nowrap">高价值预警·待触达</span></td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-cyan-400">48h内主动发新品介绍，询问采购需求</span></td>
-          <td class="px-4 py-3 text-slate-400 whitespace-nowrap">06-15</td>
-        </tr>
-        <tr class="hover:bg-slate-800/20 bg-slate-900/20">
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black badge-l3">L3</span></td>
-          <td class="px-4 py-3"><span class="font-semibold text-white">Carlos Dawn</span><span class="ml-2 text-[10px] text-slate-500"></span></td>
-          <td class="px-4 py-3 text-slate-300 whitespace-nowrap">赵锦东</td>
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-400 border border-yellow-700/20 text-[10px]">高价值买家预警</span></td>
-          <td class="px-4 py-3 text-slate-400 text-[10px]">高价值买家系统预警 · 06-16</td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-yellow-400 whitespace-nowrap">高价值预警·待触达</span></td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-cyan-400">48h内主动发新品介绍，询问采购需求</span></td>
-          <td class="px-4 py-3 text-slate-400 whitespace-nowrap">06-16</td>
-        </tr>
-        <tr class="hover:bg-slate-800/20 bg-slate-900/20">
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black badge-l3">L3</span></td>
-          <td class="px-4 py-3"><span class="font-semibold text-white">fouad r</span><span class="ml-2 text-[10px] text-slate-500"></span></td>
-          <td class="px-4 py-3 text-slate-300 whitespace-nowrap">胡晓蓓</td>
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-400 border border-yellow-700/20 text-[10px]">高价值买家预警</span></td>
-          <td class="px-4 py-3 text-slate-400 text-[10px]">高价值买家系统预警 · 06-16</td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-yellow-400 whitespace-nowrap">高价值预警·待触达</span></td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-cyan-400">48h内主动发新品介绍，询问采购需求</span></td>
-          <td class="px-4 py-3 text-slate-400 whitespace-nowrap">06-16</td>
-        </tr>
-        <tr class="hover:bg-slate-800/20 bg-slate-900/20">
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black badge-l3">L3</span></td>
-          <td class="px-4 py-3"><span class="font-semibold text-white">Redouane Mouna</span><span class="ml-2 text-[10px] text-slate-500"></span></td>
-          <td class="px-4 py-3 text-slate-300 whitespace-nowrap">李思贤</td>
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-400 border border-yellow-700/20 text-[10px]">高价值买家预警</span></td>
-          <td class="px-4 py-3 text-slate-400 text-[10px]">高价值买家系统预警 · 06-16</td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-yellow-400 whitespace-nowrap">高价值预警·待触达</span></td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-cyan-400">48h内主动发新品介绍，询问采购需求</span></td>
-          <td class="px-4 py-3 text-slate-400 whitespace-nowrap">06-16</td>
-        </tr>
-        <tr class="hover:bg-slate-800/20 bg-slate-900/20">
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black badge-l3">L3</span></td>
-          <td class="px-4 py-3"><span class="font-semibold text-white">Shabeer POONTHOTTATHIL</span><span class="ml-2 text-[10px] text-slate-500"></span></td>
-          <td class="px-4 py-3 text-slate-300 whitespace-nowrap">胡晓蓓</td>
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-400 border border-yellow-700/20 text-[10px]">高价值买家预警</span></td>
-          <td class="px-4 py-3 text-slate-400 text-[10px]">高价值买家系统预警 · 06-17</td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-yellow-400 whitespace-nowrap">高价值预警·待触达</span></td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-cyan-400">48h内主动发新品介绍，询问采购需求</span></td>
-          <td class="px-4 py-3 text-slate-400 whitespace-nowrap">06-17</td>
-        </tr>
-        <tr class="hover:bg-slate-800/20 bg-slate-900/20">
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black badge-l3">L3</span></td>
-          <td class="px-4 py-3"><span class="font-semibold text-white">KHANIA LLC</span><span class="ml-2 text-[10px] text-slate-500"></span></td>
-          <td class="px-4 py-3 text-slate-300 whitespace-nowrap">司然然</td>
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-400 border border-yellow-700/20 text-[10px]">高价值买家预警</span></td>
-          <td class="px-4 py-3 text-slate-400 text-[10px]">高价值买家系统预警 · 06-18</td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-yellow-400 whitespace-nowrap">高价值预警·待触达</span></td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-cyan-400">48h内主动发新品介绍，询问采购需求</span></td>
-          <td class="px-4 py-3 text-slate-400 whitespace-nowrap">06-18</td>
-        </tr>
-        <tr class="hover:bg-slate-800/20 bg-slate-900/20">
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black badge-l3">L3</span></td>
-          <td class="px-4 py-3"><span class="font-semibold text-white">Guillermo Castaneda</span><span class="ml-2 text-[10px] text-slate-500"></span></td>
-          <td class="px-4 py-3 text-slate-300 whitespace-nowrap">于慧</td>
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-400 border border-yellow-700/20 text-[10px]">高价值买家预警</span></td>
-          <td class="px-4 py-3 text-slate-400 text-[10px]">高价值买家系统预警 · 06-18</td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-yellow-400 whitespace-nowrap">高价值预警·待触达</span></td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-cyan-400">48h内主动发新品介绍，询问采购需求</span></td>
-          <td class="px-4 py-3 text-slate-400 whitespace-nowrap">06-18</td>
-        </tr>
-        <tr class="hover:bg-slate-800/20 bg-slate-900/20">
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black badge-l3">L3</span></td>
-          <td class="px-4 py-3"><span class="font-semibold text-white">Martha Pridham Wilkinson</span><span class="ml-2 text-[10px] text-slate-500"></span></td>
-          <td class="px-4 py-3 text-slate-300 whitespace-nowrap">许晓媛</td>
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-400 border border-yellow-700/20 text-[10px]">高价值买家预警</span></td>
-          <td class="px-4 py-3 text-slate-400 text-[10px]">高价值买家系统预警 · 06-18</td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-yellow-400 whitespace-nowrap">高价值预警·待触达</span></td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-cyan-400">48h内主动发新品介绍，询问采购需求</span></td>
-          <td class="px-4 py-3 text-slate-400 whitespace-nowrap">06-18</td>
-        </tr>
-        <tr class="hover:bg-slate-800/20 bg-slate-900/20">
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black badge-l3">L3</span></td>
-          <td class="px-4 py-3"><span class="font-semibold text-white">Aram Hakobyan</span><span class="ml-2 text-[10px] text-slate-500"></span></td>
-          <td class="px-4 py-3 text-slate-300 whitespace-nowrap">李晴</td>
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-400 border border-yellow-700/20 text-[10px]">高价值买家预警</span></td>
-          <td class="px-4 py-3 text-slate-400 text-[10px]">高价值买家系统预警 · 06-19</td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-yellow-400 whitespace-nowrap">高价值预警·待触达</span></td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-cyan-400">48h内主动发新品介绍，询问采购需求</span></td>
-          <td class="px-4 py-3 text-slate-400 whitespace-nowrap">06-19</td>
-        </tr>
-        <tr class="hover:bg-slate-800/20 bg-slate-900/20">
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black badge-l3">L3</span></td>
-          <td class="px-4 py-3"><span class="font-semibold text-white">Thompson Thompson</span><span class="ml-2 text-[10px] text-slate-500"></span></td>
-          <td class="px-4 py-3 text-slate-300 whitespace-nowrap">李静雯</td>
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-400 border border-yellow-700/20 text-[10px]">高价值买家预警</span></td>
-          <td class="px-4 py-3 text-slate-400 text-[10px]">高价值买家系统预警 · 06-19</td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-yellow-400 whitespace-nowrap">高价值预警·待触达</span></td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-cyan-400">48h内主动发新品介绍，询问采购需求</span></td>
-          <td class="px-4 py-3 text-slate-400 whitespace-nowrap">06-19</td>
-        </tr>
-        <tr class="hover:bg-slate-800/20 bg-slate-900/20">
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black badge-l3">L3</span></td>
-          <td class="px-4 py-3"><span class="font-semibold text-white">Mykola Freydun</span><span class="ml-2 text-[10px] text-slate-500"></span></td>
-          <td class="px-4 py-3 text-slate-300 whitespace-nowrap">于慧</td>
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-400 border border-yellow-700/20 text-[10px]">高价值买家预警</span></td>
-          <td class="px-4 py-3 text-slate-400 text-[10px]">高价值买家系统预警 · 06-19</td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-yellow-400 whitespace-nowrap">高价值预警·待触达</span></td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-cyan-400">48h内主动发新品介绍，询问采购需求</span></td>
-          <td class="px-4 py-3 text-slate-400 whitespace-nowrap">06-19</td>
-        </tr>
-        <tr class="hover:bg-slate-800/20 bg-slate-900/20">
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black badge-l3">L3</span></td>
-          <td class="px-4 py-3"><span class="font-semibold text-white">Ovais Khan</span><span class="ml-2 text-[10px] text-slate-500"></span></td>
-          <td class="px-4 py-3 text-slate-300 whitespace-nowrap">李晴</td>
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-400 border border-yellow-700/20 text-[10px]">高价值买家预警</span></td>
-          <td class="px-4 py-3 text-slate-400 text-[10px]">高价值买家系统预警 · 06-20</td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-yellow-400 whitespace-nowrap">高价值预警·待触达</span></td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-cyan-400">48h内主动发新品介绍，询问采购需求</span></td>
-          <td class="px-4 py-3 text-slate-400 whitespace-nowrap">06-20</td>
-        </tr>
-        <tr class="hover:bg-slate-800/20 bg-slate-900/20">
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black badge-l3">L3</span></td>
-          <td class="px-4 py-3"><span class="font-semibold text-white">Fl谩vio Monteiro</span><span class="ml-2 text-[10px] text-slate-500"></span></td>
-          <td class="px-4 py-3 text-slate-300 whitespace-nowrap">朱信哲</td>
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-400 border border-yellow-700/20 text-[10px]">高价值买家预警</span></td>
-          <td class="px-4 py-3 text-slate-400 text-[10px]">高价值买家系统预警 · 06-20</td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-yellow-400 whitespace-nowrap">高价值预警·待触达</span></td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-cyan-400">48h内主动发新品介绍，询问采购需求</span></td>
-          <td class="px-4 py-3 text-slate-400 whitespace-nowrap">06-20</td>
-        </tr>
-        <tr class="hover:bg-slate-800/20 bg-slate-900/20">
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black badge-l3">L3</span></td>
-          <td class="px-4 py-3"><span class="font-semibold text-white">Carlos Peralta</span><span class="ml-2 text-[10px] text-slate-500"></span></td>
-          <td class="px-4 py-3 text-slate-300 whitespace-nowrap">胡晓蓓</td>
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-400 border border-yellow-700/20 text-[10px]">高价值买家预警</span></td>
-          <td class="px-4 py-3 text-slate-400 text-[10px]">高价值买家系统预警 · 06-20</td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-yellow-400 whitespace-nowrap">高价值预警·待触达</span></td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-cyan-400">48h内主动发新品介绍，询问采购需求</span></td>
-          <td class="px-4 py-3 text-slate-400 whitespace-nowrap">06-20</td>
-        </tr>
-        <tr class="hover:bg-slate-800/20 bg-slate-900/20">
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black badge-l3">L3</span></td>
-          <td class="px-4 py-3"><span class="font-semibold text-white">marcelo di paola</span><span class="ml-2 text-[10px] text-slate-500"></span></td>
-          <td class="px-4 py-3 text-slate-300 whitespace-nowrap">苗璐琳</td>
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-400 border border-yellow-700/20 text-[10px]">高价值买家预警</span></td>
-          <td class="px-4 py-3 text-slate-400 text-[10px]">高价值买家系统预警 · 06-20</td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-yellow-400 whitespace-nowrap">高价值预警·待触达</span></td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-cyan-400">48h内主动发新品介绍，询问采购需求</span></td>
-          <td class="px-4 py-3 text-slate-400 whitespace-nowrap">06-20</td>
-        </tr>
-        <tr class="hover:bg-slate-800/20 bg-slate-900/20">
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black badge-l3">L3</span></td>
-          <td class="px-4 py-3"><span class="font-semibold text-white">Samira samira</span><span class="ml-2 text-[10px] text-slate-500"></span></td>
-          <td class="px-4 py-3 text-slate-300 whitespace-nowrap">胡晓蓓</td>
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-400 border border-yellow-700/20 text-[10px]">高价值买家预警</span></td>
-          <td class="px-4 py-3 text-slate-400 text-[10px]">高价值买家系统预警 · 06-21</td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-yellow-400 whitespace-nowrap">高价值预警·待触达</span></td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-cyan-400">48h内主动发新品介绍，询问采购需求</span></td>
-          <td class="px-4 py-3 text-slate-400 whitespace-nowrap">06-21</td>
-        </tr>
-        <tr class="hover:bg-slate-800/20 bg-slate-900/20">
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black badge-l3">L3</span></td>
-          <td class="px-4 py-3"><span class="font-semibold text-white">MIRIAN RUFASTO</span><span class="ml-2 text-[10px] text-slate-500"></span></td>
-          <td class="px-4 py-3 text-slate-300 whitespace-nowrap">袁明宣</td>
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-400 border border-yellow-700/20 text-[10px]">高价值买家预警</span></td>
-          <td class="px-4 py-3 text-slate-400 text-[10px]">高价值买家系统预警 · 06-22</td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-yellow-400 whitespace-nowrap">高价值预警·待触达</span></td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-cyan-400">48h内主动发新品介绍，询问采购需求</span></td>
-          <td class="px-4 py-3 text-slate-400 whitespace-nowrap">06-22</td>
-        </tr>
-        <tr class="hover:bg-slate-800/20 bg-slate-900/20">
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black badge-l3">L3</span></td>
-          <td class="px-4 py-3"><span class="font-semibold text-white">sulaiman mohammadi</span><span class="ml-2 text-[10px] text-slate-500"></span></td>
-          <td class="px-4 py-3 text-slate-300 whitespace-nowrap">司然然</td>
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-400 border border-yellow-700/20 text-[10px]">高价值买家预警</span></td>
-          <td class="px-4 py-3 text-slate-400 text-[10px]">高价值买家系统预警 · 06-22</td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-yellow-400 whitespace-nowrap">高价值预警·待触达</span></td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-cyan-400">48h内主动发新品介绍，询问采购需求</span></td>
-          <td class="px-4 py-3 text-slate-400 whitespace-nowrap">06-22</td>
-        </tr>
         <tr class="hover:bg-slate-800/20 bg-slate-900/20">
           <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black badge-l3">L3</span></td>
           <td class="px-4 py-3"><span class="font-semibold text-white">Fl谩vio Monteiro</span><span class="ml-2 text-[10px] text-slate-500"></span></td>
@@ -644,16 +455,6 @@ body { background: radial-gradient(circle at 50% 50%, #111827 0%, #070a13 100%);
         </tr>
         <tr class="hover:bg-slate-800/20 ">
           <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black badge-l1">L1</span></td>
-          <td class="px-4 py-3"><span class="text-slate-200">Everton AmaralMagagnin</span><span class="ml-2 text-[10px] text-slate-500"></span></td>
-          <td class="px-4 py-3 text-slate-300 whitespace-nowrap">赵锦东</td>
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-400 border border-yellow-700/20 text-[10px]">高价值买家预警</span></td>
-          <td class="px-4 py-3 text-slate-400 text-[10px]">高价值买家系统预警 · 06-15</td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-yellow-400 whitespace-nowrap">高价值预警·待触达</span></td>
-          <td class="px-4 py-3 text-[10px]"><span class="text-cyan-400">48h内主动发新品介绍，询问采购需求</span></td>
-          <td class="px-4 py-3 text-slate-400 whitespace-nowrap">06-15</td>
-        </tr>
-        <tr class="hover:bg-slate-800/20 ">
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black badge-l1">L1</span></td>
           <td class="px-4 py-3"><span class="text-slate-200">aswin aswin</span><span class="ml-2 text-[10px] text-slate-500"></span></td>
           <td class="px-4 py-3 text-slate-300 whitespace-nowrap">赵锦东</td>
           <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-red-900/30 text-red-400 border border-red-700/20 text-[10px]">买家未回</span></td>
@@ -736,10 +537,724 @@ body { background: radial-gradient(circle at 50% 50%, #111827 0%, #070a13 100%);
   </div>
 </section>
 
-<!-- 三、低质量回复预警 -->
+<!-- 三、高意向买家唤醒 -->
+<section class="bg-slate-900 border border-yellow-500/25 rounded-2xl overflow-hidden">
+  <div class="p-5 border-b border-slate-800 bg-slate-900/50 flex items-center justify-between">
+    <h2 class="text-base font-black text-white flex items-center gap-2">
+      <i class="fa-solid fa-bolt text-yellow-400"></i>
+      三、高意向买家唤醒（20条）
+    </h2>
+    <span class="text-[10px] text-yellow-400 bg-yellow-900/20 px-2 py-1 rounded border border-yellow-700/20">L3/L4系统预警 · 48h内必须主动触达</span>
+  </div>
+  <div class="p-5 space-y-3">
+    
+    <div class="p-4 bg-slate-950/60 rounded-xl border border-blue-500/20">
+      <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="px-2 py-0.5 rounded text-[10px] font-black text-blue-400 bg-blue-900/20 border-blue-600/30 border">L3</span>
+          <span class="font-bold text-white">Gonzalo Veizaga</span>
+          <span class="text-[10px] text-slate-400"></span>
+          <span class="text-[10px] text-slate-500">负责人：李晴</span>
+        </div>
+        <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-400 whitespace-nowrap">06-15</span>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-1.5">
+          <p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider">唤醒策略</p>
+          <p class="text-slate-300">系统标记 L3/L4 高价值买家预警，需在 <span class="text-yellow-400 font-bold">48h 内主动出击</span>，不可等待买家先联系。</p>
+          <div class="flex flex-wrap gap-1 mt-2">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">发新品介绍</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">询问采购需求</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">提供定制方案</span>
+          </div>
+        </div>
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-2">
+          <div class="flex justify-between items-center">
+            <p class="text-green-400 text-[10px] font-bold uppercase tracking-wider">唤醒话术</p>
+            <button onclick="cp('hi_0',this)" class="text-[10px] px-2 py-0.5 rounded bg-slate-800 border border-slate-700 hover:bg-slate-700 transition flex items-center gap-1"><i class="fa-regular fa-copy mr-1"></i>复制</button>
+          </div>
+          <div class="bg-black p-2 rounded font-mono text-[10px] text-cyan-400 whitespace-pre-wrap leading-relaxed select-all max-h-28 overflow-y-auto scrollbar-custom" id="hi_0">Hi Gonzalo, this is Tina from BingYan Laser. I wanted to personally follow up as I see we haven't connected recently.
+
+We've just launched some exciting new laser configurations that are very popular with customers in your region. Are you currently working on any new projects or looking to expand your production capacity?
+
+I'd love to share our latest catalog and discuss how we can support your business.
+
+Best regards, Tina | BingYan Laser</div>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 bg-slate-950/60 rounded-xl border border-blue-500/20">
+      <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="px-2 py-0.5 rounded text-[10px] font-black text-blue-400 bg-blue-900/20 border-blue-600/30 border">L3</span>
+          <span class="font-bold text-white">Hak Kheng</span>
+          <span class="text-[10px] text-slate-400"></span>
+          <span class="text-[10px] text-slate-500">负责人：李思贤</span>
+        </div>
+        <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-400 whitespace-nowrap">06-15</span>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-1.5">
+          <p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider">唤醒策略</p>
+          <p class="text-slate-300">系统标记 L3/L4 高价值买家预警，需在 <span class="text-yellow-400 font-bold">48h 内主动出击</span>，不可等待买家先联系。</p>
+          <div class="flex flex-wrap gap-1 mt-2">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">发新品介绍</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">询问采购需求</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">提供定制方案</span>
+          </div>
+        </div>
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-2">
+          <div class="flex justify-between items-center">
+            <p class="text-green-400 text-[10px] font-bold uppercase tracking-wider">唤醒话术</p>
+            <button onclick="cp('hi_1',this)" class="text-[10px] px-2 py-0.5 rounded bg-slate-800 border border-slate-700 hover:bg-slate-700 transition flex items-center gap-1"><i class="fa-regular fa-copy mr-1"></i>复制</button>
+          </div>
+          <div class="bg-black p-2 rounded font-mono text-[10px] text-cyan-400 whitespace-pre-wrap leading-relaxed select-all max-h-28 overflow-y-auto scrollbar-custom" id="hi_1">Hi Hak, this is Emily from BingYan Laser. I wanted to personally follow up as I see we haven't connected recently.
+
+We've just launched some exciting new laser configurations that are very popular with customers in your region. Are you currently working on any new projects or looking to expand your production capacity?
+
+I'd love to share our latest catalog and discuss how we can support your business.
+
+Best regards, Emily | BingYan Laser</div>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 bg-slate-950/60 rounded-xl border border-blue-500/20">
+      <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="px-2 py-0.5 rounded text-[10px] font-black text-blue-400 bg-blue-900/20 border-blue-600/30 border">L3</span>
+          <span class="font-bold text-white">Carlos Dawn</span>
+          <span class="text-[10px] text-slate-400"></span>
+          <span class="text-[10px] text-slate-500">负责人：赵锦东</span>
+        </div>
+        <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-400 whitespace-nowrap">06-16</span>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-1.5">
+          <p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider">唤醒策略</p>
+          <p class="text-slate-300">系统标记 L3/L4 高价值买家预警，需在 <span class="text-yellow-400 font-bold">48h 内主动出击</span>，不可等待买家先联系。</p>
+          <div class="flex flex-wrap gap-1 mt-2">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">发新品介绍</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">询问采购需求</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">提供定制方案</span>
+          </div>
+        </div>
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-2">
+          <div class="flex justify-between items-center">
+            <p class="text-green-400 text-[10px] font-bold uppercase tracking-wider">唤醒话术</p>
+            <button onclick="cp('hi_2',this)" class="text-[10px] px-2 py-0.5 rounded bg-slate-800 border border-slate-700 hover:bg-slate-700 transition flex items-center gap-1"><i class="fa-regular fa-copy mr-1"></i>复制</button>
+          </div>
+          <div class="bg-black p-2 rounded font-mono text-[10px] text-cyan-400 whitespace-pre-wrap leading-relaxed select-all max-h-28 overflow-y-auto scrollbar-custom" id="hi_2">Hi Carlos, this is Jackson from BingYan Laser. I wanted to personally follow up as I see we haven't connected recently.
+
+We've just launched some exciting new laser configurations that are very popular with customers in your region. Are you currently working on any new projects or looking to expand your production capacity?
+
+I'd love to share our latest catalog and discuss how we can support your business.
+
+Best regards, Jackson | BingYan Laser</div>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 bg-slate-950/60 rounded-xl border border-blue-500/20">
+      <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="px-2 py-0.5 rounded text-[10px] font-black text-blue-400 bg-blue-900/20 border-blue-600/30 border">L3</span>
+          <span class="font-bold text-white">fouad r</span>
+          <span class="text-[10px] text-slate-400"></span>
+          <span class="text-[10px] text-slate-500">负责人：胡晓蓓</span>
+        </div>
+        <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-400 whitespace-nowrap">06-16</span>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-1.5">
+          <p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider">唤醒策略</p>
+          <p class="text-slate-300">系统标记 L3/L4 高价值买家预警，需在 <span class="text-yellow-400 font-bold">48h 内主动出击</span>，不可等待买家先联系。</p>
+          <div class="flex flex-wrap gap-1 mt-2">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">发新品介绍</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">询问采购需求</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">提供定制方案</span>
+          </div>
+        </div>
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-2">
+          <div class="flex justify-between items-center">
+            <p class="text-green-400 text-[10px] font-bold uppercase tracking-wider">唤醒话术</p>
+            <button onclick="cp('hi_3',this)" class="text-[10px] px-2 py-0.5 rounded bg-slate-800 border border-slate-700 hover:bg-slate-700 transition flex items-center gap-1"><i class="fa-regular fa-copy mr-1"></i>复制</button>
+          </div>
+          <div class="bg-black p-2 rounded font-mono text-[10px] text-cyan-400 whitespace-pre-wrap leading-relaxed select-all max-h-28 overflow-y-auto scrollbar-custom" id="hi_3">Hi fouad, this is Angie from BingYan Laser. I wanted to personally follow up as I see we haven't connected recently.
+
+We've just launched some exciting new laser configurations that are very popular with customers in your region. Are you currently working on any new projects or looking to expand your production capacity?
+
+I'd love to share our latest catalog and discuss how we can support your business.
+
+Best regards, Angie | BingYan Laser</div>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 bg-slate-950/60 rounded-xl border border-blue-500/20">
+      <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="px-2 py-0.5 rounded text-[10px] font-black text-blue-400 bg-blue-900/20 border-blue-600/30 border">L3</span>
+          <span class="font-bold text-white">Redouane Mouna</span>
+          <span class="text-[10px] text-slate-400"></span>
+          <span class="text-[10px] text-slate-500">负责人：李思贤</span>
+        </div>
+        <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-400 whitespace-nowrap">06-16</span>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-1.5">
+          <p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider">唤醒策略</p>
+          <p class="text-slate-300">系统标记 L3/L4 高价值买家预警，需在 <span class="text-yellow-400 font-bold">48h 内主动出击</span>，不可等待买家先联系。</p>
+          <div class="flex flex-wrap gap-1 mt-2">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">发新品介绍</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">询问采购需求</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">提供定制方案</span>
+          </div>
+        </div>
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-2">
+          <div class="flex justify-between items-center">
+            <p class="text-green-400 text-[10px] font-bold uppercase tracking-wider">唤醒话术</p>
+            <button onclick="cp('hi_4',this)" class="text-[10px] px-2 py-0.5 rounded bg-slate-800 border border-slate-700 hover:bg-slate-700 transition flex items-center gap-1"><i class="fa-regular fa-copy mr-1"></i>复制</button>
+          </div>
+          <div class="bg-black p-2 rounded font-mono text-[10px] text-cyan-400 whitespace-pre-wrap leading-relaxed select-all max-h-28 overflow-y-auto scrollbar-custom" id="hi_4">Hi Redouane, this is Emily from BingYan Laser. I wanted to personally follow up as I see we haven't connected recently.
+
+We've just launched some exciting new laser configurations that are very popular with customers in your region. Are you currently working on any new projects or looking to expand your production capacity?
+
+I'd love to share our latest catalog and discuss how we can support your business.
+
+Best regards, Emily | BingYan Laser</div>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 bg-slate-950/60 rounded-xl border border-blue-500/20">
+      <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="px-2 py-0.5 rounded text-[10px] font-black text-blue-400 bg-blue-900/20 border-blue-600/30 border">L3</span>
+          <span class="font-bold text-white">Shabeer POONTHOTTATHIL</span>
+          <span class="text-[10px] text-slate-400"></span>
+          <span class="text-[10px] text-slate-500">负责人：胡晓蓓</span>
+        </div>
+        <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-400 whitespace-nowrap">06-17</span>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-1.5">
+          <p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider">唤醒策略</p>
+          <p class="text-slate-300">系统标记 L3/L4 高价值买家预警，需在 <span class="text-yellow-400 font-bold">48h 内主动出击</span>，不可等待买家先联系。</p>
+          <div class="flex flex-wrap gap-1 mt-2">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">发新品介绍</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">询问采购需求</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">提供定制方案</span>
+          </div>
+        </div>
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-2">
+          <div class="flex justify-between items-center">
+            <p class="text-green-400 text-[10px] font-bold uppercase tracking-wider">唤醒话术</p>
+            <button onclick="cp('hi_5',this)" class="text-[10px] px-2 py-0.5 rounded bg-slate-800 border border-slate-700 hover:bg-slate-700 transition flex items-center gap-1"><i class="fa-regular fa-copy mr-1"></i>复制</button>
+          </div>
+          <div class="bg-black p-2 rounded font-mono text-[10px] text-cyan-400 whitespace-pre-wrap leading-relaxed select-all max-h-28 overflow-y-auto scrollbar-custom" id="hi_5">Hi Shabeer, this is Angie from BingYan Laser. I wanted to personally follow up as I see we haven't connected recently.
+
+We've just launched some exciting new laser configurations that are very popular with customers in your region. Are you currently working on any new projects or looking to expand your production capacity?
+
+I'd love to share our latest catalog and discuss how we can support your business.
+
+Best regards, Angie | BingYan Laser</div>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 bg-slate-950/60 rounded-xl border border-blue-500/20">
+      <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="px-2 py-0.5 rounded text-[10px] font-black text-blue-400 bg-blue-900/20 border-blue-600/30 border">L3</span>
+          <span class="font-bold text-white">KHANIA LLC</span>
+          <span class="text-[10px] text-slate-400"></span>
+          <span class="text-[10px] text-slate-500">负责人：司然然</span>
+        </div>
+        <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-400 whitespace-nowrap">06-18</span>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-1.5">
+          <p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider">唤醒策略</p>
+          <p class="text-slate-300">系统标记 L3/L4 高价值买家预警，需在 <span class="text-yellow-400 font-bold">48h 内主动出击</span>，不可等待买家先联系。</p>
+          <div class="flex flex-wrap gap-1 mt-2">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">发新品介绍</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">询问采购需求</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">提供定制方案</span>
+          </div>
+        </div>
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-2">
+          <div class="flex justify-between items-center">
+            <p class="text-green-400 text-[10px] font-bold uppercase tracking-wider">唤醒话术</p>
+            <button onclick="cp('hi_6',this)" class="text-[10px] px-2 py-0.5 rounded bg-slate-800 border border-slate-700 hover:bg-slate-700 transition flex items-center gap-1"><i class="fa-regular fa-copy mr-1"></i>复制</button>
+          </div>
+          <div class="bg-black p-2 rounded font-mono text-[10px] text-cyan-400 whitespace-pre-wrap leading-relaxed select-all max-h-28 overflow-y-auto scrollbar-custom" id="hi_6">Hi KHANIA, this is Raya from BingYan Laser. I wanted to personally follow up as I see we haven't connected recently.
+
+We've just launched some exciting new laser configurations that are very popular with customers in your region. Are you currently working on any new projects or looking to expand your production capacity?
+
+I'd love to share our latest catalog and discuss how we can support your business.
+
+Best regards, Raya | BingYan Laser</div>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 bg-slate-950/60 rounded-xl border border-blue-500/20">
+      <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="px-2 py-0.5 rounded text-[10px] font-black text-blue-400 bg-blue-900/20 border-blue-600/30 border">L3</span>
+          <span class="font-bold text-white">Guillermo Castaneda</span>
+          <span class="text-[10px] text-slate-400"></span>
+          <span class="text-[10px] text-slate-500">负责人：于慧</span>
+        </div>
+        <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-400 whitespace-nowrap">06-18</span>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-1.5">
+          <p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider">唤醒策略</p>
+          <p class="text-slate-300">系统标记 L3/L4 高价值买家预警，需在 <span class="text-yellow-400 font-bold">48h 内主动出击</span>，不可等待买家先联系。</p>
+          <div class="flex flex-wrap gap-1 mt-2">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">发新品介绍</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">询问采购需求</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">提供定制方案</span>
+          </div>
+        </div>
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-2">
+          <div class="flex justify-between items-center">
+            <p class="text-green-400 text-[10px] font-bold uppercase tracking-wider">唤醒话术</p>
+            <button onclick="cp('hi_7',this)" class="text-[10px] px-2 py-0.5 rounded bg-slate-800 border border-slate-700 hover:bg-slate-700 transition flex items-center gap-1"><i class="fa-regular fa-copy mr-1"></i>复制</button>
+          </div>
+          <div class="bg-black p-2 rounded font-mono text-[10px] text-cyan-400 whitespace-pre-wrap leading-relaxed select-all max-h-28 overflow-y-auto scrollbar-custom" id="hi_7">Hi Guillermo, this is Sasha from BingYan Laser. I wanted to personally follow up as I see we haven't connected recently.
+
+We've just launched some exciting new laser configurations that are very popular with customers in your region. Are you currently working on any new projects or looking to expand your production capacity?
+
+I'd love to share our latest catalog and discuss how we can support your business.
+
+Best regards, Sasha | BingYan Laser</div>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 bg-slate-950/60 rounded-xl border border-blue-500/20">
+      <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="px-2 py-0.5 rounded text-[10px] font-black text-blue-400 bg-blue-900/20 border-blue-600/30 border">L3</span>
+          <span class="font-bold text-white">Martha Pridham Wilkinson</span>
+          <span class="text-[10px] text-slate-400"></span>
+          <span class="text-[10px] text-slate-500">负责人：许晓媛</span>
+        </div>
+        <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-400 whitespace-nowrap">06-18</span>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-1.5">
+          <p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider">唤醒策略</p>
+          <p class="text-slate-300">系统标记 L3/L4 高价值买家预警，需在 <span class="text-yellow-400 font-bold">48h 内主动出击</span>，不可等待买家先联系。</p>
+          <div class="flex flex-wrap gap-1 mt-2">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">发新品介绍</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">询问采购需求</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">提供定制方案</span>
+          </div>
+        </div>
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-2">
+          <div class="flex justify-between items-center">
+            <p class="text-green-400 text-[10px] font-bold uppercase tracking-wider">唤醒话术</p>
+            <button onclick="cp('hi_8',this)" class="text-[10px] px-2 py-0.5 rounded bg-slate-800 border border-slate-700 hover:bg-slate-700 transition flex items-center gap-1"><i class="fa-regular fa-copy mr-1"></i>复制</button>
+          </div>
+          <div class="bg-black p-2 rounded font-mono text-[10px] text-cyan-400 whitespace-pre-wrap leading-relaxed select-all max-h-28 overflow-y-auto scrollbar-custom" id="hi_8">Hi Martha, this is Baylee from BingYan Laser. I wanted to personally follow up as I see we haven't connected recently.
+
+We've just launched some exciting new laser configurations that are very popular with customers in your region. Are you currently working on any new projects or looking to expand your production capacity?
+
+I'd love to share our latest catalog and discuss how we can support your business.
+
+Best regards, Baylee | BingYan Laser</div>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 bg-slate-950/60 rounded-xl border border-blue-500/20">
+      <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="px-2 py-0.5 rounded text-[10px] font-black text-blue-400 bg-blue-900/20 border-blue-600/30 border">L3</span>
+          <span class="font-bold text-white">Aram Hakobyan</span>
+          <span class="text-[10px] text-slate-400"></span>
+          <span class="text-[10px] text-slate-500">负责人：李晴</span>
+        </div>
+        <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-400 whitespace-nowrap">06-19</span>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-1.5">
+          <p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider">唤醒策略</p>
+          <p class="text-slate-300">系统标记 L3/L4 高价值买家预警，需在 <span class="text-yellow-400 font-bold">48h 内主动出击</span>，不可等待买家先联系。</p>
+          <div class="flex flex-wrap gap-1 mt-2">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">发新品介绍</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">询问采购需求</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">提供定制方案</span>
+          </div>
+        </div>
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-2">
+          <div class="flex justify-between items-center">
+            <p class="text-green-400 text-[10px] font-bold uppercase tracking-wider">唤醒话术</p>
+            <button onclick="cp('hi_9',this)" class="text-[10px] px-2 py-0.5 rounded bg-slate-800 border border-slate-700 hover:bg-slate-700 transition flex items-center gap-1"><i class="fa-regular fa-copy mr-1"></i>复制</button>
+          </div>
+          <div class="bg-black p-2 rounded font-mono text-[10px] text-cyan-400 whitespace-pre-wrap leading-relaxed select-all max-h-28 overflow-y-auto scrollbar-custom" id="hi_9">Hi Aram, this is Tina from BingYan Laser. I wanted to personally follow up as I see we haven't connected recently.
+
+We've just launched some exciting new laser configurations that are very popular with customers in your region. Are you currently working on any new projects or looking to expand your production capacity?
+
+I'd love to share our latest catalog and discuss how we can support your business.
+
+Best regards, Tina | BingYan Laser</div>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 bg-slate-950/60 rounded-xl border border-blue-500/20">
+      <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="px-2 py-0.5 rounded text-[10px] font-black text-blue-400 bg-blue-900/20 border-blue-600/30 border">L3</span>
+          <span class="font-bold text-white">Thompson Thompson</span>
+          <span class="text-[10px] text-slate-400"></span>
+          <span class="text-[10px] text-slate-500">负责人：李静雯</span>
+        </div>
+        <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-400 whitespace-nowrap">06-19</span>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-1.5">
+          <p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider">唤醒策略</p>
+          <p class="text-slate-300">系统标记 L3/L4 高价值买家预警，需在 <span class="text-yellow-400 font-bold">48h 内主动出击</span>，不可等待买家先联系。</p>
+          <div class="flex flex-wrap gap-1 mt-2">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">发新品介绍</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">询问采购需求</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">提供定制方案</span>
+          </div>
+        </div>
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-2">
+          <div class="flex justify-between items-center">
+            <p class="text-green-400 text-[10px] font-bold uppercase tracking-wider">唤醒话术</p>
+            <button onclick="cp('hi_10',this)" class="text-[10px] px-2 py-0.5 rounded bg-slate-800 border border-slate-700 hover:bg-slate-700 transition flex items-center gap-1"><i class="fa-regular fa-copy mr-1"></i>复制</button>
+          </div>
+          <div class="bg-black p-2 rounded font-mono text-[10px] text-cyan-400 whitespace-pre-wrap leading-relaxed select-all max-h-28 overflow-y-auto scrollbar-custom" id="hi_10">Hi Thompson, this is Heidi from BingYan Laser. I wanted to personally follow up as I see we haven't connected recently.
+
+We've just launched some exciting new laser configurations that are very popular with customers in your region. Are you currently working on any new projects or looking to expand your production capacity?
+
+I'd love to share our latest catalog and discuss how we can support your business.
+
+Best regards, Heidi | BingYan Laser</div>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 bg-slate-950/60 rounded-xl border border-blue-500/20">
+      <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="px-2 py-0.5 rounded text-[10px] font-black text-blue-400 bg-blue-900/20 border-blue-600/30 border">L3</span>
+          <span class="font-bold text-white">Mykola Freydun</span>
+          <span class="text-[10px] text-slate-400"></span>
+          <span class="text-[10px] text-slate-500">负责人：于慧</span>
+        </div>
+        <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-400 whitespace-nowrap">06-19</span>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-1.5">
+          <p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider">唤醒策略</p>
+          <p class="text-slate-300">系统标记 L3/L4 高价值买家预警，需在 <span class="text-yellow-400 font-bold">48h 内主动出击</span>，不可等待买家先联系。</p>
+          <div class="flex flex-wrap gap-1 mt-2">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">发新品介绍</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">询问采购需求</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">提供定制方案</span>
+          </div>
+        </div>
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-2">
+          <div class="flex justify-between items-center">
+            <p class="text-green-400 text-[10px] font-bold uppercase tracking-wider">唤醒话术</p>
+            <button onclick="cp('hi_11',this)" class="text-[10px] px-2 py-0.5 rounded bg-slate-800 border border-slate-700 hover:bg-slate-700 transition flex items-center gap-1"><i class="fa-regular fa-copy mr-1"></i>复制</button>
+          </div>
+          <div class="bg-black p-2 rounded font-mono text-[10px] text-cyan-400 whitespace-pre-wrap leading-relaxed select-all max-h-28 overflow-y-auto scrollbar-custom" id="hi_11">Hi Mykola, this is Sasha from BingYan Laser. I wanted to personally follow up as I see we haven't connected recently.
+
+We've just launched some exciting new laser configurations that are very popular with customers in your region. Are you currently working on any new projects or looking to expand your production capacity?
+
+I'd love to share our latest catalog and discuss how we can support your business.
+
+Best regards, Sasha | BingYan Laser</div>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 bg-slate-950/60 rounded-xl border border-blue-500/20">
+      <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="px-2 py-0.5 rounded text-[10px] font-black text-blue-400 bg-blue-900/20 border-blue-600/30 border">L3</span>
+          <span class="font-bold text-white">Ovais Khan</span>
+          <span class="text-[10px] text-slate-400"></span>
+          <span class="text-[10px] text-slate-500">负责人：李晴</span>
+        </div>
+        <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-400 whitespace-nowrap">06-20</span>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-1.5">
+          <p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider">唤醒策略</p>
+          <p class="text-slate-300">系统标记 L3/L4 高价值买家预警，需在 <span class="text-yellow-400 font-bold">48h 内主动出击</span>，不可等待买家先联系。</p>
+          <div class="flex flex-wrap gap-1 mt-2">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">发新品介绍</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">询问采购需求</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">提供定制方案</span>
+          </div>
+        </div>
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-2">
+          <div class="flex justify-between items-center">
+            <p class="text-green-400 text-[10px] font-bold uppercase tracking-wider">唤醒话术</p>
+            <button onclick="cp('hi_12',this)" class="text-[10px] px-2 py-0.5 rounded bg-slate-800 border border-slate-700 hover:bg-slate-700 transition flex items-center gap-1"><i class="fa-regular fa-copy mr-1"></i>复制</button>
+          </div>
+          <div class="bg-black p-2 rounded font-mono text-[10px] text-cyan-400 whitespace-pre-wrap leading-relaxed select-all max-h-28 overflow-y-auto scrollbar-custom" id="hi_12">Hi Ovais, this is Tina from BingYan Laser. I wanted to personally follow up as I see we haven't connected recently.
+
+We've just launched some exciting new laser configurations that are very popular with customers in your region. Are you currently working on any new projects or looking to expand your production capacity?
+
+I'd love to share our latest catalog and discuss how we can support your business.
+
+Best regards, Tina | BingYan Laser</div>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 bg-slate-950/60 rounded-xl border border-blue-500/20">
+      <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="px-2 py-0.5 rounded text-[10px] font-black text-blue-400 bg-blue-900/20 border-blue-600/30 border">L3</span>
+          <span class="font-bold text-white">Fl谩vio Monteiro</span>
+          <span class="text-[10px] text-slate-400"></span>
+          <span class="text-[10px] text-slate-500">负责人：朱信哲</span>
+        </div>
+        <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-400 whitespace-nowrap">06-20</span>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-1.5">
+          <p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider">唤醒策略</p>
+          <p class="text-slate-300">系统标记 L3/L4 高价值买家预警，需在 <span class="text-yellow-400 font-bold">48h 内主动出击</span>，不可等待买家先联系。</p>
+          <div class="flex flex-wrap gap-1 mt-2">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">发新品介绍</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">询问采购需求</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">提供定制方案</span>
+          </div>
+        </div>
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-2">
+          <div class="flex justify-between items-center">
+            <p class="text-green-400 text-[10px] font-bold uppercase tracking-wider">唤醒话术</p>
+            <button onclick="cp('hi_13',this)" class="text-[10px] px-2 py-0.5 rounded bg-slate-800 border border-slate-700 hover:bg-slate-700 transition flex items-center gap-1"><i class="fa-regular fa-copy mr-1"></i>复制</button>
+          </div>
+          <div class="bg-black p-2 rounded font-mono text-[10px] text-cyan-400 whitespace-pre-wrap leading-relaxed select-all max-h-28 overflow-y-auto scrollbar-custom" id="hi_13">Hi Fl谩vio, this is Edison from BingYan Laser. I wanted to personally follow up as I see we haven't connected recently.
+
+We've just launched some exciting new laser configurations that are very popular with customers in your region. Are you currently working on any new projects or looking to expand your production capacity?
+
+I'd love to share our latest catalog and discuss how we can support your business.
+
+Best regards, Edison | BingYan Laser</div>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 bg-slate-950/60 rounded-xl border border-blue-500/20">
+      <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="px-2 py-0.5 rounded text-[10px] font-black text-blue-400 bg-blue-900/20 border-blue-600/30 border">L3</span>
+          <span class="font-bold text-white">Carlos Peralta</span>
+          <span class="text-[10px] text-slate-400"></span>
+          <span class="text-[10px] text-slate-500">负责人：胡晓蓓</span>
+        </div>
+        <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-400 whitespace-nowrap">06-20</span>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-1.5">
+          <p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider">唤醒策略</p>
+          <p class="text-slate-300">系统标记 L3/L4 高价值买家预警，需在 <span class="text-yellow-400 font-bold">48h 内主动出击</span>，不可等待买家先联系。</p>
+          <div class="flex flex-wrap gap-1 mt-2">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">发新品介绍</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">询问采购需求</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">提供定制方案</span>
+          </div>
+        </div>
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-2">
+          <div class="flex justify-between items-center">
+            <p class="text-green-400 text-[10px] font-bold uppercase tracking-wider">唤醒话术</p>
+            <button onclick="cp('hi_14',this)" class="text-[10px] px-2 py-0.5 rounded bg-slate-800 border border-slate-700 hover:bg-slate-700 transition flex items-center gap-1"><i class="fa-regular fa-copy mr-1"></i>复制</button>
+          </div>
+          <div class="bg-black p-2 rounded font-mono text-[10px] text-cyan-400 whitespace-pre-wrap leading-relaxed select-all max-h-28 overflow-y-auto scrollbar-custom" id="hi_14">Hi Carlos, this is Angie from BingYan Laser. I wanted to personally follow up as I see we haven't connected recently.
+
+We've just launched some exciting new laser configurations that are very popular with customers in your region. Are you currently working on any new projects or looking to expand your production capacity?
+
+I'd love to share our latest catalog and discuss how we can support your business.
+
+Best regards, Angie | BingYan Laser</div>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 bg-slate-950/60 rounded-xl border border-blue-500/20">
+      <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="px-2 py-0.5 rounded text-[10px] font-black text-blue-400 bg-blue-900/20 border-blue-600/30 border">L3</span>
+          <span class="font-bold text-white">marcelo di paola</span>
+          <span class="text-[10px] text-slate-400"></span>
+          <span class="text-[10px] text-slate-500">负责人：苗璐琳</span>
+        </div>
+        <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-400 whitespace-nowrap">06-20</span>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-1.5">
+          <p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider">唤醒策略</p>
+          <p class="text-slate-300">系统标记 L3/L4 高价值买家预警，需在 <span class="text-yellow-400 font-bold">48h 内主动出击</span>，不可等待买家先联系。</p>
+          <div class="flex flex-wrap gap-1 mt-2">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">发新品介绍</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">询问采购需求</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">提供定制方案</span>
+          </div>
+        </div>
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-2">
+          <div class="flex justify-between items-center">
+            <p class="text-green-400 text-[10px] font-bold uppercase tracking-wider">唤醒话术</p>
+            <button onclick="cp('hi_15',this)" class="text-[10px] px-2 py-0.5 rounded bg-slate-800 border border-slate-700 hover:bg-slate-700 transition flex items-center gap-1"><i class="fa-regular fa-copy mr-1"></i>复制</button>
+          </div>
+          <div class="bg-black p-2 rounded font-mono text-[10px] text-cyan-400 whitespace-pre-wrap leading-relaxed select-all max-h-28 overflow-y-auto scrollbar-custom" id="hi_15">Hi marcelo, this is Sophie from BingYan Laser. I wanted to personally follow up as I see we haven't connected recently.
+
+We've just launched some exciting new laser configurations that are very popular with customers in your region. Are you currently working on any new projects or looking to expand your production capacity?
+
+I'd love to share our latest catalog and discuss how we can support your business.
+
+Best regards, Sophie | BingYan Laser</div>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 bg-slate-950/60 rounded-xl border border-blue-500/20">
+      <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="px-2 py-0.5 rounded text-[10px] font-black text-blue-400 bg-blue-900/20 border-blue-600/30 border">L3</span>
+          <span class="font-bold text-white">Samira samira</span>
+          <span class="text-[10px] text-slate-400"></span>
+          <span class="text-[10px] text-slate-500">负责人：胡晓蓓</span>
+        </div>
+        <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-400 whitespace-nowrap">06-21</span>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-1.5">
+          <p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider">唤醒策略</p>
+          <p class="text-slate-300">系统标记 L3/L4 高价值买家预警，需在 <span class="text-yellow-400 font-bold">48h 内主动出击</span>，不可等待买家先联系。</p>
+          <div class="flex flex-wrap gap-1 mt-2">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">发新品介绍</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">询问采购需求</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">提供定制方案</span>
+          </div>
+        </div>
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-2">
+          <div class="flex justify-between items-center">
+            <p class="text-green-400 text-[10px] font-bold uppercase tracking-wider">唤醒话术</p>
+            <button onclick="cp('hi_16',this)" class="text-[10px] px-2 py-0.5 rounded bg-slate-800 border border-slate-700 hover:bg-slate-700 transition flex items-center gap-1"><i class="fa-regular fa-copy mr-1"></i>复制</button>
+          </div>
+          <div class="bg-black p-2 rounded font-mono text-[10px] text-cyan-400 whitespace-pre-wrap leading-relaxed select-all max-h-28 overflow-y-auto scrollbar-custom" id="hi_16">Hi Samira, this is Angie from BingYan Laser. I wanted to personally follow up as I see we haven't connected recently.
+
+We've just launched some exciting new laser configurations that are very popular with customers in your region. Are you currently working on any new projects or looking to expand your production capacity?
+
+I'd love to share our latest catalog and discuss how we can support your business.
+
+Best regards, Angie | BingYan Laser</div>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 bg-slate-950/60 rounded-xl border border-blue-500/20">
+      <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="px-2 py-0.5 rounded text-[10px] font-black text-blue-400 bg-blue-900/20 border-blue-600/30 border">L3</span>
+          <span class="font-bold text-white">MIRIAN RUFASTO</span>
+          <span class="text-[10px] text-slate-400"></span>
+          <span class="text-[10px] text-slate-500">负责人：袁明宣</span>
+        </div>
+        <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-400 whitespace-nowrap">06-22</span>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-1.5">
+          <p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider">唤醒策略</p>
+          <p class="text-slate-300">系统标记 L3/L4 高价值买家预警，需在 <span class="text-yellow-400 font-bold">48h 内主动出击</span>，不可等待买家先联系。</p>
+          <div class="flex flex-wrap gap-1 mt-2">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">发新品介绍</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">询问采购需求</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">提供定制方案</span>
+          </div>
+        </div>
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-2">
+          <div class="flex justify-between items-center">
+            <p class="text-green-400 text-[10px] font-bold uppercase tracking-wider">唤醒话术</p>
+            <button onclick="cp('hi_17',this)" class="text-[10px] px-2 py-0.5 rounded bg-slate-800 border border-slate-700 hover:bg-slate-700 transition flex items-center gap-1"><i class="fa-regular fa-copy mr-1"></i>复制</button>
+          </div>
+          <div class="bg-black p-2 rounded font-mono text-[10px] text-cyan-400 whitespace-pre-wrap leading-relaxed select-all max-h-28 overflow-y-auto scrollbar-custom" id="hi_17">Hi MIRIAN, this is Hailey from BingYan Laser. I wanted to personally follow up as I see we haven't connected recently.
+
+We've just launched some exciting new laser configurations that are very popular with customers in your region. Are you currently working on any new projects or looking to expand your production capacity?
+
+I'd love to share our latest catalog and discuss how we can support your business.
+
+Best regards, Hailey | BingYan Laser</div>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 bg-slate-950/60 rounded-xl border border-blue-500/20">
+      <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="px-2 py-0.5 rounded text-[10px] font-black text-blue-400 bg-blue-900/20 border-blue-600/30 border">L3</span>
+          <span class="font-bold text-white">sulaiman mohammadi</span>
+          <span class="text-[10px] text-slate-400"></span>
+          <span class="text-[10px] text-slate-500">负责人：司然然</span>
+        </div>
+        <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-400 whitespace-nowrap">06-22</span>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-1.5">
+          <p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider">唤醒策略</p>
+          <p class="text-slate-300">系统标记 L3/L4 高价值买家预警，需在 <span class="text-yellow-400 font-bold">48h 内主动出击</span>，不可等待买家先联系。</p>
+          <div class="flex flex-wrap gap-1 mt-2">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">发新品介绍</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">询问采购需求</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">提供定制方案</span>
+          </div>
+        </div>
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-2">
+          <div class="flex justify-between items-center">
+            <p class="text-green-400 text-[10px] font-bold uppercase tracking-wider">唤醒话术</p>
+            <button onclick="cp('hi_18',this)" class="text-[10px] px-2 py-0.5 rounded bg-slate-800 border border-slate-700 hover:bg-slate-700 transition flex items-center gap-1"><i class="fa-regular fa-copy mr-1"></i>复制</button>
+          </div>
+          <div class="bg-black p-2 rounded font-mono text-[10px] text-cyan-400 whitespace-pre-wrap leading-relaxed select-all max-h-28 overflow-y-auto scrollbar-custom" id="hi_18">Hi sulaiman, this is Raya from BingYan Laser. I wanted to personally follow up as I see we haven't connected recently.
+
+We've just launched some exciting new laser configurations that are very popular with customers in your region. Are you currently working on any new projects or looking to expand your production capacity?
+
+I'd love to share our latest catalog and discuss how we can support your business.
+
+Best regards, Raya | BingYan Laser</div>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 bg-slate-950/60 rounded-xl border border-blue-500/20">
+      <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="px-2 py-0.5 rounded text-[10px] font-black text-blue-400 bg-blue-900/20 border-blue-600/30 border">L1</span>
+          <span class="font-bold text-white">Everton AmaralMagagnin</span>
+          <span class="text-[10px] text-slate-400"></span>
+          <span class="text-[10px] text-slate-500">负责人：赵锦东</span>
+        </div>
+        <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-400 whitespace-nowrap">06-15</span>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-1.5">
+          <p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider">唤醒策略</p>
+          <p class="text-slate-300">系统标记 L3/L4 高价值买家预警，需在 <span class="text-yellow-400 font-bold">48h 内主动出击</span>，不可等待买家先联系。</p>
+          <div class="flex flex-wrap gap-1 mt-2">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">发新品介绍</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">询问采购需求</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-cyan-400">提供定制方案</span>
+          </div>
+        </div>
+        <div class="bg-slate-900 rounded-lg p-3 text-xs space-y-2">
+          <div class="flex justify-between items-center">
+            <p class="text-green-400 text-[10px] font-bold uppercase tracking-wider">唤醒话术</p>
+            <button onclick="cp('hi_19',this)" class="text-[10px] px-2 py-0.5 rounded bg-slate-800 border border-slate-700 hover:bg-slate-700 transition flex items-center gap-1"><i class="fa-regular fa-copy mr-1"></i>复制</button>
+          </div>
+          <div class="bg-black p-2 rounded font-mono text-[10px] text-cyan-400 whitespace-pre-wrap leading-relaxed select-all max-h-28 overflow-y-auto scrollbar-custom" id="hi_19">Hi Everton, this is Jackson from BingYan Laser. I wanted to personally follow up as I see we haven't connected recently.
+
+We've just launched some exciting new laser configurations that are very popular with customers in your region. Are you currently working on any new projects or looking to expand your production capacity?
+
+I'd love to share our latest catalog and discuss how we can support your business.
+
+Best regards, Jackson | BingYan Laser</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 四、低质量回复预警 -->
 <section class="bg-slate-900 border border-orange-500/25 rounded-2xl overflow-hidden">
   <div class="p-5 border-b border-slate-800 bg-slate-900/50 flex items-center justify-between">
-    <h2 class="text-base font-black text-white flex items-center gap-2"><i class="fa-solid fa-triangle-exclamation text-orange-400"></i> 三、业务员低质量回复预警（5条）</h2>
+    <h2 class="text-base font-black text-white flex items-center gap-2"><i class="fa-solid fa-triangle-exclamation text-orange-400"></i> 四、业务员低质量回复预警（5条）</h2>
     <span class="text-[10px] text-orange-400 bg-orange-900/20 px-2 py-1 rounded border border-orange-700/20">onlyHi + rcTooShort · 已排除同事客户</span>
   </div>
   <div class="p-5 space-y-4">
@@ -869,7 +1384,7 @@ body { background: radial-gradient(circle at 50% 50%, #111827 0%, #070a13 100%);
     <div class="space-y-2">
       <h3 class="text-sm font-black text-white">贾总总复盘</h3>
       <p class="text-xs text-slate-300 leading-relaxed font-semibold italic">
-        "本次9天全量诊断（06-15至06-23），四层过滤排除30条成交/复购/注销/垃圾询价后，实际需要跟进的问题询盘57条。L3高价值买家预警最多，说明系统已识别到高意向买家但业务员跟进不及时。低质量回复5条提醒我们回复质量仍需提升——一个'Hi'或'Welcome'就打发买家是绝对不够的。请各业务员今日内逐一核查名下问题买家，优先处理高价值预警和已读未回案例。"
+        "本次9天全量诊断（06-15至06-23），四层过滤排除30条成交/复购/注销/垃圾询价后，实际需要跟进的问题询盘37条。L3高价值买家预警最多，说明系统已识别到高意向买家但业务员跟进不及时。低质量回复5条提醒我们回复质量仍需提升——一个'Hi'或'Welcome'就打发买家是绝对不够的。请各业务员今日内逐一核查名下问题买家，优先处理高价值预警和已读未回案例。"
       </p>
       <div class="text-right text-[10px] text-slate-500 italic">ACCIO 铁血诊断系统 V6.4 · 2026-06-24 · 洛阳冰岩激光 · 四层过滤 · 统计红线24h · 全等级(L0-L4)</div>
     </div>
@@ -881,17 +1396,17 @@ body { background: radial-gradient(circle at 50% 50%, #111827 0%, #070a13 100%);
 <script>
 new Chart(document.getElementById('levelChart').getContext('2d'), {
   type:'doughnut',
-  data:{ labels:["L3", "L1", "L2", "L0"], datasets:[{ data:[27, 8, 21, 1], backgroundColor:["#4facfe", "#6b7280", "#94a3b8", "#6b7280"], borderWidth:0 }] },
+  data:{ labels:["L1", "L2", "L3", "L0"], datasets:[{ data:[7, 21, 8, 1], backgroundColor:["#6b7280", "#94a3b8", "#4facfe", "#6b7280"], borderWidth:0 }] },
   options:{ responsive:true, maintainAspectRatio:false, plugins:{ legend:{ position:'right', labels:{ color:'#94a3b8', boxWidth:8, font:{size:10} } } }, cutout:'62%' }
 });
 new Chart(document.getElementById('issueChart').getContext('2d'), {
   type:'doughnut',
-  data:{ labels:["\u9ad8\u4ef7\u503c\u4e70\u5bb6\u9884\u8b66", "\u4e70\u5bb6\u672a\u56de", "\u8d8524h\u672a\u56de\u590d"], datasets:[{ data:[20, 18, 19], backgroundColor:["#f97316", "#ff3366", "#f59e0b"], borderWidth:0 }] },
+  data:{ labels:["\u4e70\u5bb6\u672a\u56de", "\u8d8524h\u672a\u56de\u590d"], datasets:[{ data:[18, 19], backgroundColor:["#f97316", "#ff3366"], borderWidth:0 }] },
   options:{ responsive:true, maintainAspectRatio:false, plugins:{ legend:{ position:'right', labels:{ color:'#94a3b8', boxWidth:8, font:{size:10} } } }, cutout:'62%' }
 });
 new Chart(document.getElementById('ownerChart').getContext('2d'), {
   type:'bar',
-  data:{ labels:["\u674e\u601d\u8d24", "\u6731\u4fe1\u54f2", "\u53f8\u7136\u7136", "\u80e1\u6653\u84d3", "\u8d75\u9526\u4e1c", "\u8bb8\u6653\u5a9b"], datasets:[{ data:[15, 6, 5, 5, 4, 4], backgroundColor:['#ff3366','#f97316','#f59e0b','#4facfe','#10b981','#a855f7'], borderRadius:3 }] },
+  data:{ labels:["\u674e\u601d\u8d24", "\u6731\u4fe1\u54f2", "\u8bb8\u6653\u5a9b", "\u53f8\u7136\u7136", "\u8d75\u9526\u4e1c", "\u8881\u660e\u5ba3"], datasets:[{ data:[13, 5, 3, 3, 2, 2], backgroundColor:['#ff3366','#f97316','#f59e0b','#4facfe','#10b981','#a855f7'], borderRadius:3 }] },
   options:{ responsive:true, maintainAspectRatio:false, plugins:{ legend:{ display:false } }, scales:{ x:{ ticks:{ color:'#94a3b8', font:{size:9} }, grid:{ display:false } }, y:{ ticks:{ color:'#94a3b8', stepSize:1 }, grid:{ color:'#1e293b' } } } }
 });
 function cp(id,btn){
