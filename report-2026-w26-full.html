@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>业务询盘诊断报告 - 2026-06-21至06-23（全量版）</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'Noto Sans SC', 'sans-serif'] },
+                    colors: {
+                        cyber: { dark: '#070a13', card: '#0e1424', accent: '#00f2fe', primary: '#4facfe', danger: '#ff3366', warning: '#ffb547', success: '#10b981' }
+                    },
+                    boxShadow: { 'neon-blue': '0 0 15px rgba(79,172,254,0.4)', 'neon-red': '0 0 15px rgba(255,51,102,0.4)' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background: radial-gradient(circle at 50% 50%, #111827 0%, #070a13 100%); }
+        .scrollbar-custom::-webkit-scrollbar { width: 6px; }
+        .scrollbar-custom::-webkit-scrollbar-track { background: #070a13; }
+        .scrollbar-custom::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+        .scrollbar-custom::-webkit-scrollbar-thumb:hover { background: #4facfe; }
+    </style>
+</head>
+<body class="text-slate-200 antialiased font-sans pb-16">
+
+<!-- HEADER -->
+<header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="flex items-center gap-4">
+            <div class="h-12 w-12 rounded-lg bg-gradient-to-tr from-cyan-500 to-blue-400 flex items-center justify-center shadow-neon-blue">
+                <i class="fa-solid fa-gauge-high text-xl text-white"></i>
+            </div>
+            <div>
+                <div class="flex items-center gap-2">
+                    <span class="text-xs font-bold tracking-widest text-cyan-400 uppercase">ACCIO 铁血诊断系统 V5.9 · 冰岩激光</span>
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-900/40 text-red-400 border border-red-500/30 animate-pulse">贾总专属预警</span>
+                </div>
+                <h1 class="text-xl md:text-2xl font-black text-white">2026-06-21 至 06-23 询盘诊断报告（全量版）</h1>
+            </div>
+        </div>
+        <div class="flex gap-3 text-xs flex-wrap">
+            <div class="bg-slate-800/80 border border-slate-700 rounded-lg px-3 py-2">
+                <p class="text-slate-400 text-[10px]">诊断周期</p>
+                <p class="font-bold text-slate-200">06-21 ~ 06-23（3天）</p>
+            </div>
+            <div class="bg-slate-800/80 border border-slate-700 rounded-lg px-3 py-2">
+                <p class="text-slate-400 text-[10px]">统计红线</p>
+                <p class="font-bold text-cyan-400">24h · 全等级</p>
+            </div>
+            <div class="bg-slate-800/80 border border-slate-700 rounded-lg px-3 py-2">
+                <p class="text-slate-400 text-[10px]">问题记录</p>
+                <p class="font-bold text-red-400 text-lg">28 条</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 space-y-8">
+
+<!-- 合伙人预警 -->
+<section class="relative overflow-hidden rounded-2xl border border-red-500/40 bg-gradient-to-r from-red-950/50 to-transparent p-6 sm:p-8" style="box-shadow:0 0 15px rgba(255,51,102,0.2)">
+    <div class="flex flex-col md:flex-row items-start gap-5">
+        <div class="p-3 bg-red-500 text-white rounded-xl flex-shrink-0 animate-bounce">
+            <i class="fa-solid fa-radiation text-2xl"></i>
+        </div>
+        <div class="space-y-2">
+            <h2 class="text-lg font-black text-red-400 tracking-wider uppercase">贾总红线预警（全量统计）</h2>
+            <p class="text-lg font-bold text-white leading-relaxed">
+                本周期（06-21~06-23）全量扫描，共发现 <span class="text-red-400 font-black text-2xl">28</span> 条问题记录，
+                涉及 <span class="text-red-400 font-black text-2xl">12</span> 位业务员，
+                覆盖 <span class="text-cyan-400 font-black">L0 至 L4</span> 全部买家等级。
+            </p>
+            <p class="text-sm text-slate-300">
+                统计红线：<strong class="text-cyan-400">24h</strong> · 已排除已成交客户 ·
+                最高危：<strong class="text-red-400">L4买家 Alexey Bobylev（于慧）L3L4异常</strong> 和
+                <strong class="text-red-400">L4买家 Vlademiro Ramos（李思贤）买家未回</strong>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- 数据总览 -->
+<section class="grid grid-cols-2 md:grid-cols-5 gap-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 flex flex-col gap-2">
+        <i class="fa-solid fa-triangle-exclamation text-red-400 text-xl"></i>
+        <div class="text-3xl font-black text-red-400">28</div>
+        <div class="text-xs text-slate-400">问题记录总数</div>
+    </div>
+    <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 flex flex-col gap-2">
+        <i class="fa-solid fa-users text-blue-400 text-xl"></i>
+        <div class="text-3xl font-black text-blue-400">12</div>
+        <div class="text-xs text-slate-400">涉及业务员</div>
+    </div>
+    <div class="bg-slate-900 border border-yellow-500/30 rounded-xl p-5 flex flex-col gap-2">
+        <i class="fa-solid fa-crown text-yellow-400 text-xl"></i>
+        <div class="text-3xl font-black text-yellow-400">2</div>
+        <div class="text-xs text-slate-400">L4买家异常</div>
+    </div>
+    <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 flex flex-col gap-2">
+        <i class="fa-solid fa-user-group text-blue-300 text-xl"></i>
+        <div class="text-3xl font-black text-blue-300">13</div>
+        <div class="text-xs text-slate-400">L3买家问题</div>
+    </div>
+    <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 flex flex-col gap-2">
+        <i class="fa-solid fa-user text-slate-400 text-xl"></i>
+        <div class="text-3xl font-black text-slate-300">13</div>
+        <div class="text-xs text-slate-400">L0-L2买家问题</div>
+    </div>
+</section>
+
+<!-- 图表区 -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
+        <h3 class="text-xs font-bold text-slate-400 mb-4 text-center">买家等级分布</h3>
+        <div class="h-48"><canvas id="levelChart"></canvas></div>
+    </div>
+    <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
+        <h3 class="text-xs font-bold text-slate-400 mb-4 text-center">问题类型分布</h3>
+        <div class="h-48"><canvas id="issueChart"></canvas></div>
+    </div>
+    <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
+        <h3 class="text-xs font-bold text-slate-400 mb-4 text-center">业务员问题分布（Top 6）</h3>
+        <div class="h-48"><canvas id="ownerChart"></canvas></div>
+    </div>
+</section>
+
+<!-- 全量问题明细 -->
+<section class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
+    <div class="p-5 border-b border-slate-800 bg-slate-900/60 flex items-center justify-between">
+        <h2 class="text-lg font-black text-white flex items-center gap-2">
+            <i class="fa-solid fa-table-list text-cyan-400"></i> 全量问题买家明细（28条，按等级排序）
+        </h2>
+        <span class="text-xs text-slate-400">含 L0/L1/L2/L3/L4 全部等级</span>
+    </div>
+    <div class="overflow-x-auto scrollbar-custom">
+        <table class="w-full text-xs">
+            <thead class="bg-slate-800/60">
+                <tr>
+                    <th class="px-4 py-3 text-left text-slate-400 font-bold">等级</th>
+                    <th class="px-4 py-3 text-left text-slate-400 font-bold">买家姓名</th>
+                    <th class="px-4 py-3 text-left text-slate-400 font-bold">负责人</th>
+                    <th class="px-4 py-3 text-left text-slate-400 font-bold">问题类型</th>
+                    <th class="px-4 py-3 text-left text-slate-400 font-bold">日期</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60">
+                <!-- L4 -->
+                <tr class="hover:bg-slate-800/30">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black bg-yellow-900/40 text-yellow-400">L4</span></td>
+                    <td class="px-4 py-3 font-semibold text-white">Alexey Bobylev</td>
+                    <td class="px-4 py-3 text-slate-300">于慧</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-400 border border-yellow-700/20">L3L4异常</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-22</td>
+                </tr>
+                <tr class="hover:bg-slate-800/30">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black bg-yellow-900/40 text-yellow-400">L4</span></td>
+                    <td class="px-4 py-3 font-semibold text-white">Vlademiro Ramos</td>
+                    <td class="px-4 py-3 text-slate-300">李思贤</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-red-900/30 text-red-400 border border-red-700/20">买家未回</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-21</td>
+                </tr>
+                <!-- L3 -->
+                <tr class="hover:bg-slate-800/30 bg-slate-900/20">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black bg-blue-900/40 text-blue-400">L3</span></td>
+                    <td class="px-4 py-3 font-semibold text-white">Marwah Alwahaibi</td>
+                    <td class="px-4 py-3 text-slate-300">于慧</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-red-900/30 text-red-400 border border-red-700/20">买家未回</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-21</td>
+                </tr>
+                <tr class="hover:bg-slate-800/30 bg-slate-900/20">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black bg-blue-900/40 text-blue-400">L3</span></td>
+                    <td class="px-4 py-3 font-semibold text-white">sulaiman mohammadi</td>
+                    <td class="px-4 py-3 text-slate-300">司然然</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-400 border border-yellow-700/20">L3L4异常</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-22</td>
+                </tr>
+                <tr class="hover:bg-slate-800/30 bg-slate-900/20">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black bg-blue-900/40 text-blue-400">L3</span></td>
+                    <td class="px-4 py-3 font-semibold text-white">Mauchamp Benjamin</td>
+                    <td class="px-4 py-3 text-slate-300">李思贤</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-slate-700 text-slate-300 border border-slate-600">待核查</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-22</td>
+                </tr>
+                <tr class="hover:bg-slate-800/30 bg-slate-900/20">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black bg-blue-900/40 text-blue-400">L3</span></td>
+                    <td class="px-4 py-3 font-semibold text-white">Cory Back</td>
+                    <td class="px-4 py-3 text-slate-300">李晴</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-orange-900/30 text-orange-400 border border-orange-700/20">超12h</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-21</td>
+                </tr>
+                <tr class="hover:bg-slate-800/30 bg-slate-900/20">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black bg-blue-900/40 text-blue-400">L3</span></td>
+                    <td class="px-4 py-3 font-semibold text-white">Emils Sjanita</td>
+                    <td class="px-4 py-3 text-slate-300">李晴</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-orange-900/30 text-orange-400 border border-orange-700/20">超12h</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-22</td>
+                </tr>
+                <tr class="hover:bg-slate-800/30 bg-slate-900/20">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black bg-blue-900/40 text-blue-400">L3</span></td>
+                    <td class="px-4 py-3 font-semibold text-white">IpawDeityforceAhmad BAKOUAN</td>
+                    <td class="px-4 py-3 text-slate-300">李静雯</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-orange-900/30 text-orange-400 border border-orange-700/20">超12h</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-21</td>
+                </tr>
+                <tr class="hover:bg-slate-800/30 bg-slate-900/20">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black bg-blue-900/40 text-blue-400">L3</span></td>
+                    <td class="px-4 py-3 font-semibold text-white">Jay S</td>
+                    <td class="px-4 py-3 text-slate-300">李静雯</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-orange-900/30 text-orange-400 border border-orange-700/20">超12h</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-22</td>
+                </tr>
+                <tr class="hover:bg-slate-800/30 bg-slate-900/20">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black bg-blue-900/40 text-blue-400">L3</span></td>
+                    <td class="px-4 py-3 font-semibold text-white">Samira samira</td>
+                    <td class="px-4 py-3 text-slate-300">胡晓蓓</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-400 border border-yellow-700/20">L3L4异常</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-21</td>
+                </tr>
+                <tr class="hover:bg-slate-800/30 bg-slate-900/20">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black bg-blue-900/40 text-blue-400">L3</span></td>
+                    <td class="px-4 py-3 font-semibold text-white">kevin hernandez</td>
+                    <td class="px-4 py-3 text-slate-300">袁明宣</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-orange-900/30 text-orange-400 border border-orange-700/20">超12h</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-21</td>
+                </tr>
+                <tr class="hover:bg-slate-800/30 bg-slate-900/20">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black bg-blue-900/40 text-blue-400">L3</span></td>
+                    <td class="px-4 py-3 font-semibold text-white">Alex Rafael</td>
+                    <td class="px-4 py-3 text-slate-300">袁明宣</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-400 border border-yellow-700/20">L3L4异常</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-22</td>
+                </tr>
+                <tr class="hover:bg-slate-800/30 bg-slate-900/20">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black bg-blue-900/40 text-blue-400">L3</span></td>
+                    <td class="px-4 py-3 font-semibold text-white">MIRIAN RUFASTO</td>
+                    <td class="px-4 py-3 text-slate-300">袁明宣</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-400 border border-yellow-700/20">L3L4异常</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-22</td>
+                </tr>
+                <tr class="hover:bg-slate-800/30 bg-slate-900/20">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black bg-blue-900/40 text-blue-400">L3</span></td>
+                    <td class="px-4 py-3 font-semibold text-white">kevin hernandez</td>
+                    <td class="px-4 py-3 text-slate-300">袁明宣</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-red-900/30 text-red-400 border border-red-700/20">买家未回</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-22</td>
+                </tr>
+                <tr class="hover:bg-slate-800/30 bg-slate-900/20">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-black bg-blue-900/40 text-blue-400">L3</span></td>
+                    <td class="px-4 py-3 font-semibold text-white">User name</td>
+                    <td class="px-4 py-3 text-slate-300">赵锦东</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-400 border border-yellow-700/20">L3L4异常</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-22</td>
+                </tr>
+                <!-- L2 -->
+                <tr class="hover:bg-slate-800/30">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-700 text-slate-300">L2</span></td>
+                    <td class="px-4 py-3 text-slate-200">Luis Gonzalez</td>
+                    <td class="px-4 py-3 text-slate-300">info</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-orange-900/30 text-orange-400 border border-orange-700/20">超12h</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-21</td>
+                </tr>
+                <tr class="hover:bg-slate-800/30">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-700 text-slate-300">L2</span></td>
+                    <td class="px-4 py-3 text-slate-200">khdyjt alshbyb</td>
+                    <td class="px-4 py-3 text-slate-300">info</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-orange-900/30 text-orange-400 border border-orange-700/20">超12h</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-22</td>
+                </tr>
+                <tr class="hover:bg-slate-800/30">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-700 text-slate-300">L2</span></td>
+                    <td class="px-4 py-3 text-slate-200">Wa Hma</td>
+                    <td class="px-4 py-3 text-slate-300">于慧</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-slate-700 text-slate-300 border border-slate-600">待核查</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-21</td>
+                </tr>
+                <tr class="hover:bg-slate-800/30">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-700 text-slate-300">L2</span></td>
+                    <td class="px-4 py-3 text-slate-200">Pavllin Penev</td>
+                    <td class="px-4 py-3 text-slate-300">朱信哲</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-orange-900/30 text-orange-400 border border-orange-700/20">超12h</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-22</td>
+                </tr>
+                <tr class="hover:bg-slate-800/30">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-700 text-slate-300">L2</span></td>
+                    <td class="px-4 py-3 text-slate-200">Luis Ruiz</td>
+                    <td class="px-4 py-3 text-slate-300">朱信哲</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-red-900/30 text-red-400 border border-red-700/20">买家未回</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-22</td>
+                </tr>
+                <tr class="hover:bg-slate-800/30">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-700 text-slate-300">L2</span></td>
+                    <td class="px-4 py-3 text-slate-200">Angelo Pedretti</td>
+                    <td class="px-4 py-3 text-slate-300">李思贤</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-orange-900/30 text-orange-400 border border-orange-700/20">超12h</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-22</td>
+                </tr>
+                <tr class="hover:bg-slate-800/30">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-700 text-slate-300">L2</span></td>
+                    <td class="px-4 py-3 text-slate-200">NTK Corporation</td>
+                    <td class="px-4 py-3 text-slate-300">胡晓蓓</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-red-900/30 text-red-400 border border-red-700/20">买家未回</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-21</td>
+                </tr>
+                <tr class="hover:bg-slate-800/30">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-700 text-slate-300">L2</span></td>
+                    <td class="px-4 py-3 text-slate-200">Marc Pothoff</td>
+                    <td class="px-4 py-3 text-slate-300">苗璐琳</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-slate-700 text-slate-300 border border-slate-600">待核查</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-22</td>
+                </tr>
+                <tr class="hover:bg-slate-800/30">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-700 text-slate-300">L2</span></td>
+                    <td class="px-4 py-3 text-slate-200">Lucky Bordelon</td>
+                    <td class="px-4 py-3 text-slate-300">苗璐琳</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-purple-900/30 text-purple-400 border border-purple-700/20">重复回复</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-22</td>
+                </tr>
+                <tr class="hover:bg-slate-800/30">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-700 text-slate-300">L2</span></td>
+                    <td class="px-4 py-3 text-slate-200">Martin Stamenov</td>
+                    <td class="px-4 py-3 text-slate-300">陈思源</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-orange-900/30 text-orange-400 border border-orange-700/20">超12h</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-21</td>
+                </tr>
+                <tr class="hover:bg-slate-800/30">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-700 text-slate-300">L2</span></td>
+                    <td class="px-4 py-3 text-slate-200">Laurent Depeuille</td>
+                    <td class="px-4 py-3 text-slate-300">陈思源</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-purple-900/30 text-purple-400 border border-purple-700/20">重复回复</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-22</td>
+                </tr>
+                <!-- L1/L0 -->
+                <tr class="hover:bg-slate-800/30">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-800 text-slate-400">L1</span></td>
+                    <td class="px-4 py-3 text-slate-200">Angel Quimbiulco</td>
+                    <td class="px-4 py-3 text-slate-300">李思贤</td>
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-red-900/30 text-red-400 border border-red-700/20">买家未回</span></td>
+                    <td class="px-4 py-3 text-slate-400">06-22</td>
+                </tr>
+                <tr class="hover:bg-slate-800/30">
+                    <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-800 text-slate-400">L0</span></td>
+                    <td class="px-4 py-3 text-slate-200">Jorge Gomez</td>
+                    <td class="px-4 py-3 text-slate-300">赵锦东</td>
+                    <td class="px-4 py-3">
+                        <span class="px-2 py-0.5 rounded bg-slate-700/50 text-slate-300 border border-slate-600 mr-1">回复过短</span>
+                        <span class="px-2 py-0.5 rounded bg-purple-900/30 text-purple-400 border border-purple-700/20">重复回复</span>
+                    </td>
+                    <td class="px-4 py-3 text-slate-400">06-22</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- 业务员汇总 -->
+<section class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
+    <div class="p-5 border-b border-slate-800 bg-slate-900/60">
+        <h2 class="text-lg font-black text-white flex items-center gap-2">
+            <i class="fa-solid fa-users text-blue-400"></i> 业务员问题汇总
+        </h2>
+    </div>
+    <div class="p-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between mb-2"><span class="font-bold text-white">袁明宣</span><span class="text-red-400 font-black">4条</span></div><div class="text-[10px] text-slate-400">kevin L3 ×2 · Alex Rafael L3 · MIRIAN L3</div></div>
+        <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between mb-2"><span class="font-bold text-white">李思贤</span><span class="text-red-400 font-black">4条</span></div><div class="text-[10px] text-slate-400">Vlademiro L4 · Mauchamp L3 · Angelo L2 · Angel L1</div></div>
+        <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between mb-2"><span class="font-bold text-white">于慧</span><span class="text-orange-400 font-black">3条</span></div><div class="text-[10px] text-slate-400">Alexey L4 · Marwah L3 · Wa Hma L2</div></div>
+        <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between mb-2"><span class="font-bold text-white">李晴</span><span class="text-yellow-400 font-black">2条</span></div><div class="text-[10px] text-slate-400">Cory Back L3 · Emils Sjanita L3</div></div>
+        <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between mb-2"><span class="font-bold text-white">李静雯</span><span class="text-yellow-400 font-black">2条</span></div><div class="text-[10px] text-slate-400">BAKOUAN L3 · Jay S L3</div></div>
+        <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between mb-2"><span class="font-bold text-white">胡晓蓓</span><span class="text-yellow-400 font-black">2条</span></div><div class="text-[10px] text-slate-400">Samira L3 · NTK Corporation L2</div></div>
+        <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between mb-2"><span class="font-bold text-white">陈思源</span><span class="text-yellow-400 font-black">2条</span></div><div class="text-[10px] text-slate-400">Martin L2 · Laurent L2</div></div>
+        <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between mb-2"><span class="font-bold text-white">info账号</span><span class="text-yellow-400 font-black">2条</span></div><div class="text-[10px] text-slate-400">Luis Gonzalez L2 · khdyjt alshbyb L2</div></div>
+        <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between mb-2"><span class="font-bold text-white">朱信哲</span><span class="text-yellow-400 font-black">2条</span></div><div class="text-[10px] text-slate-400">Pavllin L2 · Luis Ruiz L2</div></div>
+        <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between mb-2"><span class="font-bold text-white">赵锦东</span><span class="text-yellow-400 font-black">2条</span></div><div class="text-[10px] text-slate-400">User name L3 · Jorge Gomez L0</div></div>
+        <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between mb-2"><span class="font-bold text-white">苗璐琳</span><span class="text-yellow-400 font-black">2条</span></div><div class="text-[10px] text-slate-400">Marc L2 · Lucky L2</div></div>
+        <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800"><div class="flex justify-between mb-2"><span class="font-bold text-white">司然然</span><span class="text-green-400 font-black">1条</span></div><div class="text-[10px] text-slate-400">sulaiman mohammadi L3</div></div>
+    </div>
+</section>
+
+<!-- 贾总总复盘 -->
+<section class="bg-gradient-to-r from-slate-900 to-slate-900/50 border border-slate-800 rounded-2xl p-6 sm:p-8">
+    <div class="flex gap-4 items-start">
+        <span class="h-10 w-10 rounded-lg bg-cyan-400/10 text-cyan-400 flex items-center justify-center text-xl flex-shrink-0"><i class="fa-solid fa-quote-left"></i></span>
+        <div class="space-y-3">
+            <h3 class="text-base font-black text-white">贾总总复盘</h3>
+            <p class="text-sm text-slate-300 leading-relaxed font-semibold italic">
+                "本次全量统计（含L0-L4所有等级）结果显示，3天内共28条问题记录，涉及12人。和之前只统计L3/L4相比，L2买家（11条）占了近四成——这部分过去是盲区，现在全部纳入视野。需要特别关注：袁明宣和李思贤各4条，量最多；于慧名下有一个L4买家Alexey Bobylev出现异常，这是最高级别风险，必须今日处理。另外，info账号下的两个L2买家超12h无回复，说明公司账号也存在接待漏洞，需要明确责任人。"
+            </p>
+            <div class="text-right text-xs text-slate-500 italic">
+                * ACCIO 铁血诊断系统 V5.9 · 2026-06-24 · 洛阳冰岩激光 · 全量统计（L0-L4） · 统计红线：24h
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<script>
+// 等级分布
+new Chart(document.getElementById('levelChart').getContext('2d'), {
+    type: 'doughnut',
+    data: {
+        labels: ['L4','L3','L2','L1','L0'],
+        datasets: [{ data: [2,13,11,1,1], backgroundColor: ['#f59e0b','#4facfe','#94a3b8','#6b7280','#374151'], borderWidth: 0 }]
+    },
+    options: { responsive:true, maintainAspectRatio:false, plugins:{ legend:{ position:'right', labels:{ color:'#94a3b8', boxWidth:8, font:{size:10} } } }, cutout:'62%' }
+});
+
+// 问题类型
+new Chart(document.getElementById('issueChart').getContext('2d'), {
+    type: 'doughnut',
+    data: {
+        labels: ['超12h','买家未回','L3L4异常','重复回复','回复过短','待核查'],
+        datasets: [{ data: [11,7,7,3,1,3], backgroundColor: ['#f97316','#ff3366','#f59e0b','#a855f7','#6b7280','#1e293b'], borderWidth: 0 }]
+    },
+    options: { responsive:true, maintainAspectRatio:false, plugins:{ legend:{ position:'right', labels:{ color:'#94a3b8', boxWidth:8, font:{size:10} } } }, cutout:'62%' }
+});
+
+// 业务员分布
+new Chart(document.getElementById('ownerChart').getContext('2d'), {
+    type: 'bar',
+    data: {
+        labels: ['袁明宣','李思贤','于慧','李晴','李静雯','胡晓蓓'],
+        datasets: [{ data: [4,4,3,2,2,2], backgroundColor: ['#ff3366','#ff3366','#f97316','#f59e0b','#f59e0b','#f59e0b'], borderRadius: 4 }]
+    },
+    options: { responsive:true, maintainAspectRatio:false, plugins:{ legend:{ display:false } }, scales:{ x:{ ticks:{ color:'#94a3b8', font:{size:9} }, grid:{ display:false } }, y:{ ticks:{ color:'#94a3b8', stepSize:1 }, grid:{ color:'#1e293b' } } } }
+});
+</script>
+</body>
+</html>
