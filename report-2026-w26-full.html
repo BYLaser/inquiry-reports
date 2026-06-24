@@ -89,10 +89,35 @@
 
 <!-- 数据总览 -->
 <section class="grid grid-cols-2 md:grid-cols-5 gap-4">
-    <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 flex flex-col gap-2">
-        <i class="fa-solid fa-triangle-exclamation text-red-400 text-xl"></i>
-        <div class="text-3xl font-black text-red-400">28</div>
-        <div class="text-xs text-slate-400">问题记录总数</div>
+    <!-- 原因类型明细卡片 -->
+    <div class="bg-slate-900 border border-red-500/30 rounded-xl p-4 flex flex-col gap-2 col-span-2 md:col-span-1" style="box-shadow:0 0 10px rgba(255,51,102,0.15)">
+        <div class="flex items-center justify-between">
+            <i class="fa-solid fa-triangle-exclamation text-red-400 text-base"></i>
+            <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">问题明细</span>
+        </div>
+        <div class="text-2xl font-black text-red-400 leading-none">28 <span class="text-sm font-normal text-slate-400">条</span></div>
+        <div class="mt-1 space-y-1.5">
+            <div class="flex justify-between items-center">
+                <span class="text-[11px] text-orange-400 flex items-center gap-1"><span class="h-1.5 w-1.5 rounded-full bg-orange-400 inline-block"></span>超12h未回</span>
+                <span class="text-[11px] font-black text-orange-400">11</span>
+            </div>
+            <div class="flex justify-between items-center">
+                <span class="text-[11px] text-red-400 flex items-center gap-1"><span class="h-1.5 w-1.5 rounded-full bg-red-400 inline-block"></span>买家未回复</span>
+                <span class="text-[11px] font-black text-red-400">7</span>
+            </div>
+            <div class="flex justify-between items-center">
+                <span class="text-[11px] text-yellow-400 flex items-center gap-1"><span class="h-1.5 w-1.5 rounded-full bg-yellow-400 inline-block"></span>L3L4异常</span>
+                <span class="text-[11px] font-black text-yellow-400">7</span>
+            </div>
+            <div class="flex justify-between items-center">
+                <span class="text-[11px] text-purple-400 flex items-center gap-1"><span class="h-1.5 w-1.5 rounded-full bg-purple-400 inline-block"></span>重复回复</span>
+                <span class="text-[11px] font-black text-purple-400">3</span>
+            </div>
+            <div class="flex justify-between items-center">
+                <span class="text-[11px] text-slate-400 flex items-center gap-1"><span class="h-1.5 w-1.5 rounded-full bg-slate-500 inline-block"></span>待核查</span>
+                <span class="text-[11px] font-black text-slate-400">3</span>
+            </div>
+        </div>
     </div>
     <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 flex flex-col gap-2">
         <i class="fa-solid fa-users text-blue-400 text-xl"></i>
