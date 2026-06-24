@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>业务询盘诊断报告 - 2026-06-21至06-23</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'Noto Sans SC', 'sans-serif'] },
+                    colors: {
+                        cyber: {
+                            dark: '#070a13', card: '#0e1424',
+                            accent: '#00f2fe', primary: '#4facfe',
+                            danger: '#ff3366', warning: '#ffb547', success: '#10b981',
+                        }
+                    },
+                    boxShadow: {
+                        'neon-blue': '0 0 15px rgba(79,172,254,0.4)',
+                        'neon-red': '0 0 15px rgba(255,51,102,0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background: radial-gradient(circle at 50% 50%, #111827 0%, #070a13 100%); }
+        .scrollbar-custom::-webkit-scrollbar { width: 6px; }
+        .scrollbar-custom::-webkit-scrollbar-track { background: #070a13; }
+        .scrollbar-custom::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+        .scrollbar-custom::-webkit-scrollbar-thumb:hover { background: #4facfe; }
+    </style>
+</head>
+<body class="text-slate-200 antialiased font-sans pb-16">
+
+<!-- HEADER -->
+<header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="flex items-center gap-4">
+            <div class="h-12 w-12 rounded-lg bg-gradient-to-tr from-cyan-500 to-blue-400 flex items-center justify-center shadow-neon-blue">
+                <i class="fa-solid fa-gauge-high text-xl text-white"></i>
+            </div>
+            <div>
+                <div class="flex items-center gap-2">
+                    <span class="text-xs font-bold tracking-widest text-cyan-400 uppercase">ACCIO 铁血诊断系统 V5.8 · 冰岩激光</span>
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-900/40 text-red-400 border border-red-500/30 animate-pulse">
+                        贾总专属预警
+                    </span>
+                </div>
+                <h1 class="text-xl md:text-2xl font-black text-white">2026-06-21 至 06-23 询盘诊断报告</h1>
+            </div>
+        </div>
+        <div class="flex gap-3 text-xs">
+            <div class="bg-slate-800/80 border border-slate-700 rounded-lg px-3 py-2">
+                <p class="text-slate-400 text-[10px]">诊断周期</p>
+                <p class="font-bold text-slate-200">06-21 ~ 06-23（3天）</p>
+            </div>
+            <div class="bg-slate-800/80 border border-slate-700 rounded-lg px-3 py-2">
+                <p class="text-slate-400 text-[10px]">统计红线</p>
+                <p class="font-bold text-cyan-400">24h（含时差）</p>
+            </div>
+            <div class="bg-slate-800/80 border border-slate-700 rounded-lg px-3 py-2">
+                <p class="text-slate-400 text-[10px]">问题案例</p>
+                <p class="font-bold text-red-400 text-lg">1 条</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 space-y-8">
+
+<!-- 合伙人预警 -->
+<section class="relative overflow-hidden rounded-2xl border border-yellow-500/40 bg-gradient-to-r from-yellow-950/40 to-transparent p-6 sm:p-8" style="box-shadow:0 0 15px rgba(251,191,36,0.2)">
+    <div class="flex flex-col md:flex-row items-start gap-5">
+        <div class="p-3 bg-yellow-500 text-black rounded-xl flex-shrink-0">
+            <i class="fa-solid fa-triangle-exclamation text-2xl"></i>
+        </div>
+        <div class="space-y-2">
+            <h2 class="text-lg font-black text-yellow-400 tracking-wider uppercase">贾总，本周期诊断完成</h2>
+            <p class="text-lg font-bold text-white leading-relaxed">
+                本周期（06-21~06-23）共扫描 <span class="text-cyan-400 font-black text-2xl">7</span> 个高价值买家对话，
+                排除已成交客户后，发现 <span class="text-red-400 font-black text-2xl">1</span> 例问题询盘。
+            </p>
+            <p class="text-sm text-slate-300">
+                统计红线已调整为 <strong class="text-cyan-400">24h</strong>（考虑国际时差），已成交客户自动排除。
+                问题案例为 <strong class="text-red-400">L3 美国买家主动询价被拖延 81.3 小时</strong>，需立即跟进。
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- 数据总览 -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 flex flex-col gap-2">
+        <i class="fa-solid fa-magnifying-glass text-cyan-400 text-xl"></i>
+        <div class="text-3xl font-black text-cyan-400">7</div>
+        <div class="text-xs text-slate-400">扫描高价值买家</div>
+    </div>
+    <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 flex flex-col gap-2">
+        <i class="fa-solid fa-triangle-exclamation text-red-400 text-xl"></i>
+        <div class="text-3xl font-black text-red-400">1</div>
+        <div class="text-xs text-slate-400">问题案例</div>
+    </div>
+    <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 flex flex-col gap-2">
+        <i class="fa-solid fa-check-circle text-green-400 text-xl"></i>
+        <div class="text-3xl font-black text-green-400">6</div>
+        <div class="text-xs text-slate-400">24h内正常回复</div>
+    </div>
+    <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 flex flex-col gap-2">
+        <i class="fa-solid fa-clock text-red-400 text-xl"></i>
+        <div class="text-3xl font-black text-red-400">81.3h</div>
+        <div class="text-xs text-slate-400">最长延迟时间</div>
+    </div>
+</section>
+
+<!-- 正常案例总览 -->
+<section class="bg-slate-900 border border-green-500/20 rounded-2xl overflow-hidden">
+    <div class="p-5 border-b border-slate-800 bg-slate-900/60 flex items-center gap-2">
+        <i class="fa-solid fa-circle-check text-green-400"></i>
+        <h2 class="text-base font-black text-white">正常案例（6条，均在24h内回复，含已成交排除）</h2>
+    </div>
+    <div class="p-5">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+            <div class="p-3 bg-slate-950/60 rounded-xl border border-green-500/20 flex items-center gap-3">
+                <span class="px-2 py-0.5 rounded text-[10px] font-black bg-yellow-900/40 text-yellow-400">L4</span>
+                <div>
+                    <p class="text-sm font-bold text-white">Vlademiro Ramos</p>
+                    <p class="text-[10px] text-slate-400">李思贤 · 安哥拉 · 已回复</p>
+                </div>
+                <i class="fa-solid fa-check text-green-400 ml-auto"></i>
+            </div>
+            <div class="p-3 bg-slate-950/60 rounded-xl border border-green-500/20 flex items-center gap-3">
+                <span class="px-2 py-0.5 rounded text-[10px] font-black bg-yellow-900/40 text-yellow-400">L4</span>
+                <div>
+                    <p class="text-sm font-bold text-white">Alexey Bobylev</p>
+                    <p class="text-[10px] text-slate-400">于慧 · 俄罗斯 · 已回复</p>
+                </div>
+                <i class="fa-solid fa-check text-green-400 ml-auto"></i>
+            </div>
+            <div class="p-3 bg-slate-950/60 rounded-xl border border-green-500/20 flex items-center gap-3">
+                <span class="px-2 py-0.5 rounded text-[10px] font-black bg-yellow-900/40 text-yellow-400">L4</span>
+                <div>
+                    <p class="text-sm font-bold text-white">Sebastien Nyssen</p>
+                    <p class="text-[10px] text-slate-400">赵锦东 · 比利时 · 已回复</p>
+                </div>
+                <i class="fa-solid fa-check text-green-400 ml-auto"></i>
+            </div>
+            <div class="p-3 bg-slate-950/60 rounded-xl border border-green-500/20 flex items-center gap-3">
+                <span class="px-2 py-0.5 rounded text-[10px] font-black bg-blue-900/40 text-blue-400">L3</span>
+                <div>
+                    <p class="text-sm font-bold text-white">MIRIAN RUFASTO</p>
+                    <p class="text-[10px] text-slate-400">袁明宣 · 秘鲁 · 已回复</p>
+                </div>
+                <i class="fa-solid fa-check text-green-400 ml-auto"></i>
+            </div>
+            <div class="p-3 bg-slate-950/60 rounded-xl border border-green-500/20 flex items-center gap-3">
+                <span class="px-2 py-0.5 rounded text-[10px] font-black bg-blue-900/40 text-blue-400">L3</span>
+                <div>
+                    <p class="text-sm font-bold text-white">kevin hernandez</p>
+                    <p class="text-[10px] text-slate-400">袁明宣 · 美国 · 已回复</p>
+                </div>
+                <i class="fa-solid fa-check text-green-400 ml-auto"></i>
+            </div>
+            <div class="p-3 bg-slate-950/60 rounded-xl border border-green-500/20 flex items-center gap-3">
+                <span class="px-2 py-0.5 rounded text-[10px] font-black bg-blue-900/40 text-blue-400">L3</span>
+                <div>
+                    <p class="text-sm font-bold text-white">Marwah Alwahaibi</p>
+                    <p class="text-[10px] text-slate-400">于慧 · 阿曼 · 已回复</p>
+                </div>
+                <i class="fa-solid fa-check text-green-400 ml-auto"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 核心问题案例 -->
+<section>
+    <h2 class="text-lg font-black text-white flex items-center gap-2 mb-4">
+        <i class="fa-solid fa-microscope text-red-400"></i>
+        核心问题案例深度诊断
+    </h2>
+
+    <!-- 案例：General Starlight -->
+    <div class="bg-slate-900 border border-red-500/40 rounded-2xl overflow-hidden" style="box-shadow:0 0 15px rgba(255,51,102,0.2)">
+        <div class="px-6 py-4 bg-gradient-to-r from-red-950/50 to-transparent border-b border-slate-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+            <div class="flex items-center gap-3">
+                <span class="h-8 w-8 rounded bg-red-500 text-white font-bold flex items-center justify-center">1</span>
+                <div>
+                    <h3 class="font-extrabold text-white">L3 美国买家 General Starlight Co Inc — 主动询价81h无实质回复</h3>
+                    <p class="text-xs text-slate-400 mt-0.5">负责人：<strong class="text-slate-300">李思贤（Emily Li）</strong> · 美国 · TM商机</p>
+                </div>
+            </div>
+            <span class="px-3 py-1 rounded-full text-xs font-black bg-red-900/40 text-red-400 border border-red-500/30">
+                <i class="fa-solid fa-clock mr-1"></i>超24h回复 · 延迟81.3h
+            </span>
+        </div>
+
+        <div class="p-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- 对话切片 -->
+            <div class="bg-slate-950 p-4 rounded-xl border border-slate-900 space-y-3">
+                <div class="text-[10px] text-slate-500 text-center uppercase tracking-widest border-b border-slate-900 pb-2">对话记录</div>
+
+                <!-- 买家消息 -->
+                <div class="flex items-start gap-2">
+                    <div class="h-7 w-7 rounded-full bg-slate-700 text-slate-300 flex items-center justify-center font-bold text-xs flex-shrink-0">GS</div>
+                    <div class="bg-slate-800 rounded-r-lg rounded-bl-lg p-3 text-xs max-w-[85%]">
+                        <p class="text-slate-400 text-[10px] mb-1">General Starlight Co Inc · 2026-06-19 08:15</p>
+                        <p class="text-white font-medium">"Hi Emily, Please provide pricing for 30W and 50W MOPA. It's for single unit"</p>
+                        <p class="text-[10px] text-green-500 mt-1">✅ 明确规格 + 明确数量 = 高转化意向询盘</p>
+                    </div>
+                </div>
+
+                <!-- 延迟标注 -->
+                <div class="flex items-center gap-2 px-2">
+                    <div class="flex-1 h-px bg-red-500/30"></div>
+                    <span class="text-[10px] text-red-400 font-bold px-2 py-0.5 rounded bg-red-900/20 border border-red-500/20">
+                        <i class="fa-regular fa-clock mr-1"></i>间隔 81.3 小时
+                    </span>
+                    <div class="flex-1 h-px bg-red-500/30"></div>
+                </div>
+
+                <!-- 业务员回复 -->
+                <div class="flex items-start gap-2 justify-end">
+                    <div class="bg-blue-400/10 border border-blue-400/20 rounded-l-lg rounded-br-lg p-3 text-xs max-w-[85%] text-right">
+                        <p class="text-blue-400 text-[10px] mb-1">李思贤（Emily Li） · 2026-06-22 17:33</p>
+                        <p class="text-slate-300 italic">"Sorry, you have already contacted my colleague, so I cannot provide you with a quote"</p>
+                        <p class="text-[10px] text-red-400 mt-1">⚠️ 拒绝报价 + 未提供解决方案</p>
+                    </div>
+                    <div class="h-7 w-7 rounded-full bg-blue-400/20 text-blue-400 flex items-center justify-center font-bold text-xs flex-shrink-0">EL</div>
+                </div>
+
+                <!-- 补充说明 -->
+                <div class="mt-2 p-3 bg-orange-900/20 border border-orange-500/20 rounded-lg text-[11px] text-orange-300">
+                    <i class="fa-solid fa-circle-info mr-1"></i>
+                    业务员随后发送了产品推荐卡片，但未正面回应买家的报价请求。买家询问的 30W/50W MOPA 报价至今未给出。
+                </div>
+            </div>
+
+            <!-- 诊断+话术 -->
+            <div class="flex flex-col gap-4">
+                <!-- 病理诊断 -->
+                <div class="p-4 bg-red-950/30 border border-red-500/30 rounded-xl">
+                    <h4 class="text-xs font-black text-red-400 flex items-center gap-1.5 mb-2">
+                        <i class="fa-solid fa-virus"></i> 病理诊断：【高意向主动询价超时 + 报价回避】
+                    </h4>
+                    <div class="space-y-2 text-xs text-slate-300 leading-relaxed">
+                        <p>① <strong class="text-white">延迟问题</strong>：买家2026-06-19主动发出明确报价请求（30W/50W MOPA，单台），业务员拖延81.3小时才回复，已远超24h红线。</p>
+                        <p>② <strong class="text-white">回复质量问题</strong>：最终回复不仅没有给出报价，反而以"已联系同事"为由拒绝报价，属于典型的<span class="text-red-400">【商机归属推诿】</span>行为。</p>
+                        <p>③ <strong class="text-white">竞品风险</strong>：美国L3买家，单台采购意向明确，在81h窗口期内竞争对手极有可能完成报价并截单。</p>
+                    </div>
+                </div>
+
+                <!-- 根因分析 -->
+                <div class="p-4 bg-orange-950/30 border border-orange-500/30 rounded-xl">
+                    <h4 class="text-xs font-black text-orange-400 flex items-center gap-1.5 mb-2">
+                        <i class="fa-solid fa-magnifying-glass"></i> 根因分析：⚙️ 配置卡点 + 🏃 商机归属混乱
+                    </h4>
+                    <div class="text-xs text-slate-300 space-y-1">
+                        <p>• 买家已与同事（OKKI另一负责人）有过沟通，李思贤以"不能报价"为由推诿</p>
+                        <p>• 正确做法：应立即协调内部，给出统一报价，不能让买家感受到供应商内部混乱</p>
+                        <p>• 建议管理层明确：同一买家跨业务员时的报价协调机制</p>
+                    </div>
+                </div>
+
+                <!-- 跟进话术 -->
+                <div class="p-4 bg-slate-950 border border-slate-800 rounded-xl">
+                    <div class="flex justify-between items-center mb-2">
+                        <h4 class="text-xs font-black text-green-400 flex items-center gap-1.5">
+                            <i class="fa-solid fa-shield-halved"></i> 建议跟进实战脚本
+                        </h4>
+                        <button onclick="copyScript('s1', this)" class="text-[10px] px-2 py-1 rounded bg-slate-800 border border-slate-700 hover:bg-slate-700 transition flex items-center gap-1">
+                            <i class="fa-regular fa-copy"></i> 复制
+                        </button>
+                    </div>
+                    <div class="bg-black p-3 rounded border border-slate-900 font-mono text-[11px] text-cyan-400 whitespace-pre-wrap leading-relaxed select-all" id="s1">Hi, thank you for your patience — I apologize for the delayed response.
+
+I'd like to provide the pricing you requested:
+• 30W JPT MOPA Fiber Laser: USD [PRICE] (FOB Luoyang)
+• 50W JPT MOPA Fiber Laser: USD [PRICE] (FOB Luoyang)
+
+Both include: Rotary axis, Red dot pointer, EZCad2 software, Training video, 1-year warranty.
+Delivery: 7 business days after payment.
+
+Shall I prepare a formal quotation (PI) for your review?
+
+Best regards, Emily | BingYan Laser</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Action List -->
+<section class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
+    <div class="p-5 border-b border-slate-800 bg-slate-900/60">
+        <h2 class="text-lg font-black text-white flex items-center gap-2">
+            <i class="fa-solid fa-list-check text-cyan-400"></i> 黄金整改行动建议
+        </h2>
+    </div>
+    <div class="p-6 space-y-4">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-4 p-4 bg-slate-950/60 rounded-xl border border-red-500/20">
+            <div class="space-y-1.5">
+                <div class="flex items-center gap-2">
+                    <span class="px-2 py-0.5 rounded text-[10px] font-black bg-red-900/40 text-red-400 border border-red-700/20">立即行动 A</span>
+                    <span class="text-xs text-slate-400">对象：General Starlight Co Inc · 李思贤</span>
+                </div>
+                <h4 class="text-sm font-bold text-white">今日内发送30W/50W MOPA正式报价，不得再以"已联系同事"为由推诿</h4>
+                <p class="text-xs text-slate-400">使用上方话术脚本，补充当前USD报价和7天交货周期，推进至PI阶段</p>
+            </div>
+            <div class="text-right flex-shrink-0">
+                <div class="text-xs font-black text-red-400">预期目的</div>
+                <p class="text-xs text-slate-300">挽回高意向询盘，避免竞品截单</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-between items-start gap-4 p-4 bg-slate-950/60 rounded-xl border border-orange-500/20">
+            <div class="space-y-1.5">
+                <div class="flex items-center gap-2">
+                    <span class="px-2 py-0.5 rounded text-[10px] font-black bg-orange-900/40 text-orange-400 border border-orange-700/20">团队机制 B</span>
+                    <span class="text-xs text-slate-400">对象：全体业务员</span>
+                </div>
+                <h4 class="text-sm font-bold text-white">建立跨业务员商机归属协调机制</h4>
+                <p class="text-xs text-slate-400">同一买家被多人接触时，由OKKI归属人统一报价，禁止互相推诿导致买家等待</p>
+            </div>
+            <div class="text-right flex-shrink-0">
+                <div class="text-xs font-black text-orange-400">预期目的</div>
+                <p class="text-xs text-slate-300">消除内部协调漏洞</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-between items-start gap-4 p-4 bg-slate-950/60 rounded-xl border border-green-500/20">
+            <div class="space-y-1.5">
+                <div class="flex items-center gap-2">
+                    <span class="px-2 py-0.5 rounded text-[10px] font-black bg-green-900/40 text-green-400 border border-green-700/20">持续优化 C</span>
+                    <span class="text-xs text-slate-400">亮点表彰</span>
+                </div>
+                <h4 class="text-sm font-bold text-white">表彰本周期表现优秀的业务员</h4>
+                <p class="text-xs text-slate-400">于慧（Alexey L4 / Marwah L3）、袁明宣（MIRIAN L3 / kevin L3）、赵锦东（Sebastien L4）均在24h内有效回复，值得肯定</p>
+            </div>
+            <div class="text-right flex-shrink-0">
+                <div class="text-xs font-black text-green-400">预期目的</div>
+                <p class="text-xs text-slate-300">正向激励，巩固好习惯</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 贾总总复盘 -->
+<section class="bg-gradient-to-r from-slate-900 to-slate-900/50 border border-slate-800 rounded-2xl p-6 sm:p-8">
+    <div class="flex gap-4 items-start">
+        <span class="h-10 w-10 rounded-lg bg-cyan-400/10 text-cyan-400 flex items-center justify-center text-xl flex-shrink-0">
+            <i class="fa-solid fa-quote-left"></i>
+        </span>
+        <div class="space-y-3">
+            <h3 class="text-base font-black text-white">贾总总复盘</h3>
+            <p class="text-sm text-slate-300 leading-relaxed font-semibold italic">
+                "本周期（06-21~06-23）整体表现较上周明显改善——7个高价值买家中有6个在24h内得到有效回复，这是进步。但唯一的问题案例暴露了一个管理盲区：当同一买家被多个业务员接触时，内部协调机制缺失会导致买家等待81小时还拿不到一个简单的报价。这不是业务员能力问题，是流程问题。需要明确：OKKI归属人有权也有责任第一时间给出报价，不能以'已有同事跟进'为由推诿。买家不在乎你们内部怎么分工，他只在乎能不能快速拿到答案。"
+            </p>
+            <div class="text-right text-xs text-slate-500 italic">
+                * ACCIO 铁血诊断系统 V5.8 · 2026-06-24 · 洛阳冰岩激光设备有限公司 · 统计红线24h · 已排除已成交客户
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- Toast -->
+<div id="toast" class="fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-slate-900 border border-cyan-400 text-cyan-400 px-4 py-2 rounded-xl text-xs font-bold transition-all duration-300 opacity-0 pointer-events-none flex items-center gap-2 z-50">
+    <i class="fa-solid fa-check-double"></i><span>话术脚本已复制到剪贴板！</span>
+</div>
+
+<script>
+function copyScript(id, btn) {
+    const text = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        const t = document.getElementById('toast');
+        t.style.opacity = '1';
+        const orig = btn.innerHTML;
+        btn.innerHTML = '<i class="fa-solid fa-check mr-1"></i>已复制';
+        setTimeout(() => { t.style.opacity = '0'; btn.innerHTML = orig; }, 2000);
+    });
+}
+</script>
+</body>
+</html>
