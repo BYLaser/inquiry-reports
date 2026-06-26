@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>李思贤(Emily) OKKI×阿里全量对撞诊断报告 | 2025.01-2026.06</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+body{background:radial-gradient(ellipse at top,#0d1f3c 0%,#060b18 70%);min-height:100vh;font-family:'Segoe UI',sans-serif;}
+.card{background:rgba(13,20,40,0.9);border:1px solid rgba(0,200,255,0.15);border-radius:14px;}
+.card:hover{border-color:rgba(0,200,255,0.35);box-shadow:0 0 20px rgba(0,200,255,0.08);}
+.sec-bar{display:inline-block;width:4px;height:24px;border-radius:2px;margin-right:12px;vertical-align:middle;}
+th{background:#0a1525;padding:10px 16px;text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#475569;font-weight:700;}
+td{padding:10px 16px;border-bottom:1px solid rgba(30,41,59,0.7);font-size:13px;vertical-align:top;}
+tr:hover td{background:rgba(0,200,255,0.03);}
+.tag{display:inline-flex;align-items:center;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;}
+.t-red{background:rgba(255,51,102,.15);color:#ff3366;border:1px solid rgba(255,51,102,.3);}
+.t-yellow{background:rgba(255,181,71,.15);color:#ffb547;border:1px solid rgba(255,181,71,.3);}
+.t-blue{background:rgba(79,172,254,.15);color:#4facfe;border:1px solid rgba(79,172,254,.3);}
+.t-green{background:rgba(16,185,129,.15);color:#10b981;border:1px solid rgba(16,185,129,.3);}
+.t-purple{background:rgba(168,85,247,.15);color:#a855f7;border:1px solid rgba(168,85,247,.3);}
+.t-gray{background:rgba(100,116,139,.15);color:#94a3b8;border:1px solid rgba(100,116,139,.3);}
+.t-orange{background:rgba(249,115,22,.15);color:#f97316;border:1px solid rgba(249,115,22,.3);}
+.bubble-b{background:rgba(30,41,59,.9);border-radius:0 12px 12px 12px;padding:8px 12px;font-size:12px;color:#cbd5e1;margin:4px 50px 4px 0;}
+.bubble-e{background:rgba(0,80,120,.5);border-radius:12px 0 12px 12px;padding:8px 12px;font-size:12px;color:#7dd3fc;margin:4px 0 4px 50px;}
+.prog{height:6px;background:#1e293b;border-radius:3px;}
+.prog-fill{height:100%;border-radius:3px;}
+</style>
+</head>
+<body class="text-slate-200 pb-20">
+<div class="max-w-6xl mx-auto px-4 py-8">
+
+<!-- HEADER -->
+<div class="mb-10 pb-8 border-b border-slate-800">
+  <div class="flex flex-wrap gap-2 mb-4">
+    <span class="tag t-red">CRITICAL AUDIT</span>
+    <span class="tag t-blue">OKKI × 阿里国际站 全量对撞</span>
+    <span class="tag t-gray">2025-01-01 → 2026-06-25</span>
+  </div>
+  <h1 class="text-3xl font-black" style="color:#00c8ff;">李思贤（Emily Li）终极资产穿透报告</h1>
+  <p class="text-slate-400 mt-2">数据来源：OKKI导出963条客户记录 + 阿里国际站质检接口 + 全店成交订单系统</p>
+</div>
+
+<!-- CORE METRICS - OKKI维度 -->
+<div class="grid grid-cols-2 md:grid-cols-6 gap-3 mb-10">
+  <div class="card p-4 text-center col-span-2 md:col-span-1">
+    <div class="text-slate-500 text-xs font-bold mb-1">OKKI客户总量</div>
+    <div class="text-3xl font-black text-cyan-400">963</div>
+    <div class="text-slate-600 text-xs mt-1">全部为李思贤创建</div>
+  </div>
+  <div class="card p-4 text-center">
+    <div class="text-slate-500 text-xs font-bold mb-1">询盘客户</div>
+    <div class="text-3xl font-black text-blue-400">436</div>
+    <div class="text-slate-600 text-xs mt-1">45.3%</div>
+  </div>
+  <div class="card p-4 text-center">
+    <div class="text-slate-500 text-xs font-bold mb-1">长期跟进</div>
+    <div class="text-3xl font-black text-yellow-400">375</div>
+    <div class="text-slate-600 text-xs mt-1">38.9%</div>
+  </div>
+  <div class="card p-4 text-center">
+    <div class="text-slate-500 text-xs font-bold mb-1">成交客户</div>
+    <div class="text-3xl font-black text-green-400">46</div>
+    <div class="text-slate-600 text-xs mt-1">4.8%</div>
+  </div>
+  <div class="card p-4 text-center">
+    <div class="text-slate-500 text-xs font-bold mb-1">复购客户</div>
+    <div class="text-3xl font-black" style="color:#a855f7;">13</div>
+    <div class="text-slate-600 text-xs mt-1">1.3%</div>
+  </div>
+  <div class="card p-4 text-center">
+    <div class="text-slate-500 text-xs font-bold mb-1">无效客户</div>
+    <div class="text-3xl font-black text-slate-500">92</div>
+    <div class="text-slate-600 text-xs mt-1">9.6%</div>
+  </div>
+</div>
+
+<!-- OKKI阶段分布可视化 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+  <div class="card p-6">
+    <h3 class="font-bold text-slate-300 mb-4">OKKI 客户阶段分布（963条）</h3>
+    <div class="space-y-3">
+      <div>
+        <div class="flex justify-between text-sm mb-1"><span class="text-slate-400">询盘客户</span><span class="text-blue-400 font-bold">436 (45.3%)</span></div>
+        <div class="prog"><div class="prog-fill bg-blue-500" style="width:45.3%"></div></div>
+      </div>
+      <div>
+        <div class="flex justify-between text-sm mb-1"><span class="text-slate-400">长期跟进客户</span><span class="text-yellow-400 font-bold">375 (38.9%)</span></div>
+        <div class="prog"><div class="prog-fill bg-yellow-500" style="width:38.9%"></div></div>
+      </div>
+      <div>
+        <div class="flex justify-between text-sm mb-1"><span class="text-slate-400">无效客户</span><span class="text-slate-500 font-bold">92 (9.6%)</span></div>
+        <div class="prog"><div class="prog-fill bg-slate-500" style="width:9.6%"></div></div>
+      </div>
+      <div>
+        <div class="flex justify-between text-sm mb-1"><span class="text-slate-400">成交客户</span><span class="text-green-400 font-bold">46 (4.8%)</span></div>
+        <div class="prog"><div class="prog-fill bg-green-500" style="width:4.8%"></div></div>
+      </div>
+      <div>
+        <div class="flex justify-between text-sm mb-1"><span class="text-slate-400">复购客户</span><span style="color:#a855f7;" class="font-bold">13 (1.3%)</span></div>
+        <div class="prog"><div class="prog-fill" style="width:1.3%;background:#a855f7;"></div></div>
+      </div>
+    </div>
+    <div class="mt-4 p-3 rounded-lg text-xs" style="background:rgba(255,183,0,.08);border:1px solid rgba(255,183,0,.2);">
+      <span class="text-yellow-400 font-bold">转化分析：</span><span class="text-slate-400">963名客户中仅 46 人成交（4.8%），同期 James Chen 转化率 19.23%，差距达 <strong class="text-red-400">4倍</strong>。"长期跟进"实为转化漏斗的堰塞湖，375条均需核查真实跟进状态。</span>
+    </div>
+  </div>
+  <div class="card p-6">
+    <h3 class="font-bold text-slate-300 mb-4">意向产品分布（Top 8）</h3>
+    <div class="space-y-3">
+      <div>
+        <div class="flex justify-between text-sm mb-1"><span class="text-slate-400">Fiber激光打标机</span><span class="text-cyan-400 font-bold">542 (56.3%)</span></div>
+        <div class="prog"><div class="prog-fill" style="width:56.3%;background:#22d3ee;"></div></div>
+      </div>
+      <div>
+        <div class="flex justify-between text-sm mb-1"><span class="text-slate-400">连续激光清洗机</span><span class="text-cyan-400 font-bold">141 (14.6%)</span></div>
+        <div class="prog"><div class="prog-fill" style="width:14.6%;background:#22d3ee;"></div></div>
+      </div>
+      <div>
+        <div class="flex justify-between text-sm mb-1"><span class="text-slate-400">其他意向产品</span><span class="text-slate-400 font-bold">62 (6.4%)</span></div>
+        <div class="prog"><div class="prog-fill" style="width:6.4%;background:#475569;"></div></div>
+      </div>
+      <div>
+        <div class="flex justify-between text-sm mb-1"><span class="text-slate-400">UV内雕机</span><span class="text-slate-400 font-bold">44 (4.6%)</span></div>
+        <div class="prog"><div class="prog-fill" style="width:4.6%;background:#475569;"></div></div>
+      </div>
+      <div>
+        <div class="flex justify-between text-sm mb-1"><span class="text-slate-400">脉冲激光清洗机</span><span class="text-slate-400 font-bold">38 (3.9%)</span></div>
+        <div class="prog"><div class="prog-fill" style="width:3.9%;background:#475569;"></div></div>
+      </div>
+      <div>
+        <div class="flex justify-between text-sm mb-1"><span class="text-slate-400">UV激光打标机</span><span class="text-slate-400 font-bold">30 (3.1%)</span></div>
+        <div class="prog"><div class="prog-fill" style="width:3.1%;background:#475569;"></div></div>
+      </div>
+    </div>
+    <div class="mt-4 p-3 rounded-lg text-xs" style="background:rgba(0,200,255,.06);border:1px solid rgba(0,200,255,.15);">
+      <span class="text-cyan-400 font-bold">Top 5 客户国家：</span><span class="text-slate-400">美国 209 | 墨西哥 63 | 俄罗斯 33 | 阿根廷 31 | 加拿大 29</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🔴 核心发现：成交客户出现在异常列表 -->
+<section class="mb-10">
+  <div class="mb-5">
+    <span class="sec-bar" style="background:#ff3366;box-shadow:0 0 8px #ff3366;"></span>
+    <span class="text-xl font-black text-red-400">核心发现：已成交客户出现在响应异常列表（5例）</span>
+  </div>
+  <div class="card p-5 mb-4" style="border-color:rgba(255,51,102,.3);background:rgba(255,51,102,.04);">
+    <p class="text-sm text-slate-400 leading-relaxed mb-4">以下客户在 OKKI 中已标记为"成交客户"，但同时出现在阿里质检的<strong class="text-red-400">响应超时或已读未回</strong>异常列表中。这意味着：在成交后的持续沟通阶段（售后跟进、二次询价、物流跟踪），Emily 同样出现了严重的响应中断，极大损害复购可能性。</p>
+    <div class="overflow-x-auto">
+      <table>
+        <thead><tr><th>客户名称</th><th>OKKI阶段</th><th>国家</th><th>意向产品</th><th>OKKI最近跟进记录</th><th>阿里异常类型</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="font-bold text-red-300">particular_120485834173</td>
+            <td><span class="tag t-green">成交客户</span></td>
+            <td>西班牙</td>
+            <td class="text-xs text-slate-400">连续激光清洗机</td>
+            <td class="text-xs text-slate-400 italic">跟进</td>
+            <td><span class="tag t-red">响应超时 &gt;24h</span></td>
+          </tr>
+          <tr>
+            <td class="font-bold text-red-300">Fabian Casanova</td>
+            <td><span class="tag t-green">成交客户</span></td>
+            <td>智利</td>
+            <td class="text-xs text-slate-400">连续激光清洗机</td>
+            <td class="text-xs text-slate-400 italic">原产地证确认</td>
+            <td><span class="tag t-red">多次响应超时 &gt;24h</span></td>
+          </tr>
+          <tr>
+            <td class="font-bold text-red-300">Charena</td>
+            <td><span class="tag t-green">成交客户</span></td>
+            <td>菲律宾</td>
+            <td class="text-xs text-slate-400">Fiber激光打标机</td>
+            <td class="text-xs text-slate-500 italic">（无跟进备注）</td>
+            <td><span class="tag t-red">响应超时 &gt;24h</span></td>
+          </tr>
+          <tr>
+            <td class="font-bold text-red-300">Gomisteri pellumbi</td>
+            <td><span class="tag t-green">成交客户</span></td>
+            <td>美国</td>
+            <td class="text-xs text-slate-400">连续激光清洗机</td>
+            <td class="text-xs text-slate-400 italic">折扣</td>
+            <td><span class="tag t-red">响应超时 &gt;24h</span></td>
+          </tr>
+          <tr>
+            <td class="font-bold text-red-300">Aurel Schulz</td>
+            <td><span class="tag t-green">成交客户</span></td>
+            <td>德国</td>
+            <td class="text-xs text-slate-400">脉冲激光清洗机</td>
+            <td class="text-xs text-slate-400 italic">客户收到配件</td>
+            <td><span class="tag t-red">售后紧急求助超时未回</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="mt-4 p-3 rounded-lg text-xs text-red-400" style="background:rgba(255,51,102,.06);">
+      ⚠️ 诊断：Aurel Schulz 明确发出 "Could you tell me if I can still use the laser? I have jobs to do... does it overheat?"（我还能用激光机吗？我有活要做，会过热吗？）。作为已成交客户的紧急售后求助，Emily 超过 24 小时未回复，直接导致客户满意度崩盘，复购概率归零。
+    </div>
+  </div>
+</section>
+
+<!-- 阿里异常 × OKKI阶段 全量对撞表 -->
+<section class="mb-10">
+  <div class="mb-5">
+    <span class="sec-bar" style="background:#ffb547;box-shadow:0 0 8px #ffb547;"></span>
+    <span class="text-xl font-black text-yellow-400">维度① 响应超时（&gt;24h）× OKKI阶段 全量对撞</span>
+  </div>
+  <div class="mb-3 grid grid-cols-2 md:grid-cols-4 gap-3">
+    <div class="card p-4 text-center"><div class="text-xs text-slate-500 mb-1">OKKI未录入</div><div class="text-2xl font-black text-red-500">25</div><div class="text-xs text-slate-600">从未建档</div></div>
+    <div class="card p-4 text-center"><div class="text-xs text-slate-500 mb-1">OKKI询盘客户</div><div class="text-2xl font-black text-blue-400">22</div><div class="text-xs text-slate-600">停在询盘阶段</div></div>
+    <div class="card p-4 text-center"><div class="text-xs text-slate-500 mb-1">OKKI成交客户</div><div class="text-2xl font-black text-red-400">12</div><div class="text-xs text-slate-600">成交后仍超时</div></div>
+    <div class="card p-4 text-center"><div class="text-xs text-slate-500 mb-1">OKKI长期跟进</div><div class="text-2xl font-black text-yellow-400">2</div><div class="text-xs text-slate-600">长跟进无响应</div></div>
+  </div>
+  <div class="card overflow-hidden">
+    <table>
+      <thead><tr><th>买家姓名</th><th>国家</th><th>最后消息时间</th><th>OKKI阶段</th><th>OKKI跟进备注</th><th>买家最后内容（节选）</th></tr></thead>
+      <tbody>
+        <tr><td class="font-bold text-red-300">Ammar alabdllah</td><td><span class="tag t-blue">TR</span></td><td class="font-mono text-xs">2026-05-16 22:54</td><td><span class="tag t-gray">OKKI未录入</span></td><td class="text-xs text-slate-600">—</td><td class="text-xs text-slate-400 italic">完整JPT MOPA参数清单（M7/BJJCZ/Galvo型号），高意向专业询盘被晾置</td></tr>
+        <tr><td class="font-bold text-red-300">Brian Stump</td><td><span class="tag t-blue">US</span></td><td class="font-mono text-xs">2026-05-21 05:04</td><td><span class="tag t-gray">OKKI未录入</span></td><td class="text-xs text-slate-600">—</td><td class="text-xs text-slate-400 italic">"Please read my questions sent Tuesday"（已催3次）</td></tr>
+        <tr><td class="font-bold">Eljona Arapi</td><td><span class="tag t-blue">US</span></td><td class="font-mono text-xs">2026-05-11 04:43</td><td><span class="tag t-yellow">询盘客户</span></td><td class="text-xs text-slate-400">—</td><td class="text-xs text-slate-400 italic">"It doesn't appear in any invoice...you said no extra charge"（承诺纠纷）</td></tr>
+        <tr><td class="font-bold text-red-300">Fabian Casanova</td><td><span class="tag t-blue">CL</span></td><td class="font-mono text-xs">2026-05-09~06-22</td><td><span class="tag t-green">成交客户</span></td><td class="text-xs text-slate-400">原产地证确认</td><td class="text-xs text-slate-400 italic">买家多次联系（5次），Emily 均延迟超24h</td></tr>
+        <tr><td class="font-bold text-red-300">Aurel Schulz</td><td><span class="tag t-blue">DE</span></td><td class="font-mono text-xs">2026-05-18 06:06</td><td><span class="tag t-green">成交客户</span></td><td class="text-xs text-slate-400">客户收到配件</td><td class="text-xs text-slate-400 italic">"Could you tell me if I can still use the laser? I have jobs to do"（售后紧急）</td></tr>
+        <tr><td class="font-bold">Ezequiel Silveira</td><td><span class="tag t-blue">UY</span></td><td class="font-mono text-xs">2026-05-25~26</td><td><span class="tag t-yellow">询盘客户</span></td><td class="text-xs text-slate-400">—</td><td class="text-xs text-slate-400 italic">"Cuál sería el costo de la máquina?"（连问2次无回复→James Chen成交）</td></tr>
+        <tr><td class="font-bold">Kimberly campbell</td><td><span class="tag t-blue">US</span></td><td class="font-mono text-xs">2026-06-14 22:37</td><td><span class="tag t-yellow">询盘客户</span></td><td class="text-xs text-slate-400">—</td><td class="text-xs text-slate-400 italic">"evaluating long-term supplier partnerships in the U.S. market"（潜在大客）</td></tr>
+        <tr><td class="font-bold">Aleksandr Maksimov</td><td><span class="tag t-blue">RU</span></td><td class="font-mono text-xs">2026-06-12 13:50</td><td><span class="tag t-gray">OKKI未录入</span></td><td class="text-xs text-slate-600">—</td><td class="text-xs text-slate-400 italic">"compare JPT MOPA M7 60W premium vs standard"（方案对比询价）</td></tr>
+        <tr><td class="font-bold">Ralph Dematteo</td><td><span class="tag t-blue">US</span></td><td class="font-mono text-xs">2026-06-18 17:48</td><td><span class="tag t-gray">OKKI未录入</span></td><td class="text-xs text-slate-600">—</td><td class="text-xs text-slate-400 italic">"Yea i figured it would be more"（最终BY Laser成交）</td></tr>
+        <tr><td class="font-bold">Lorenzo Garcia</td><td><span class="tag t-blue">DO</span></td><td class="font-mono text-xs">2026-05-12~06-12</td><td><span class="tag t-gray">OKKI未录入</span></td><td class="text-xs text-slate-600">—</td><td class="text-xs text-slate-400 italic">"Tengo que tallar 40 mil tapas"（4万件批量需求，超30天无推进）</td></tr>
+        <tr><td class="font-bold">Mauchamp Benjamin</td><td><span class="tag t-blue">FR</span></td><td class="font-mono text-xs">2026-06-22 07:43</td><td><span class="tag t-gray">OKKI未录入</span></td><td class="text-xs text-slate-600">—</td><td class="text-xs text-slate-400 italic">"Could you provide address to send barrel samples for marking tests?"（主动寄样）</td></tr>
+        <tr><td class="font-bold">General Starlight Co Inc</td><td><span class="tag t-blue">US</span></td><td class="font-mono text-xs">2026-06-18 17:15</td><td><span class="tag t-gray">OKKI未录入</span></td><td class="text-xs text-slate-600">—</td><td class="text-xs text-slate-400 italic">"Please provide pricing for 30W and 50W MOPA"（明确报价需求）</td></tr>
+        <tr><td class="text-slate-500 italic" colspan="6">... 另有 49 条超时记录详见完整数据</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 维度② 零沟通 × OKKI -->
+<section class="mb-10">
+  <div class="mb-5">
+    <span class="sec-bar" style="background:#f97316;box-shadow:0 0 8px #f97316;"></span>
+    <span class="text-xl font-black text-orange-400">维度② 零沟通询盘 × OKKI阶段（18条）</span>
+  </div>
+  <div class="mb-3 grid grid-cols-2 md:grid-cols-3 gap-3">
+    <div class="card p-4 text-center"><div class="text-xs text-slate-500 mb-1">OKKI询盘客户</div><div class="text-2xl font-black text-blue-400">16</div><div class="text-xs text-slate-600">已录入但零TM互动</div></div>
+    <div class="card p-4 text-center"><div class="text-xs text-slate-500 mb-1">OKKI完全未录入</div><div class="text-2xl font-black text-red-500">1</div><div class="text-xs text-slate-600">零录入零沟通</div></div>
+    <div class="card p-4 text-center"><div class="text-xs text-slate-500 mb-1">OKKI长期跟进</div><div class="text-2xl font-black text-yellow-400">1</div><div class="text-xs text-slate-600">跟进中但零回复</div></div>
+  </div>
+  <div class="card overflow-hidden">
+    <table>
+      <thead><tr><th>买家姓名</th><th>国家</th><th>OKKI阶段</th><th>意向产品</th><th>OKKI跟进备注</th><th>危险等级</th></tr></thead>
+      <tbody>
+        <tr><td class="font-bold text-red-300">Win Cj</td><td>泰国</td><td><span class="tag t-yellow">询盘客户</span></td><td class="text-xs text-slate-400">Fiber激光打标机</td><td class="text-xs text-slate-400">—</td><td><span class="tag t-red">L3高意向 · 最高危</span></td></tr>
+        <tr><td class="font-bold text-red-300">Daniel Magiera</td><td>美国</td><td><span class="tag t-yellow">询盘客户</span></td><td class="text-xs text-slate-400">—</td><td class="text-xs text-slate-400">—</td><td><span class="tag t-red">主动邀合作 · 高危</span></td></tr>
+        <tr><td class="font-bold">Naif Taha</td><td>加拿大</td><td><span class="tag t-yellow">询盘客户</span></td><td class="text-xs text-slate-400">Fiber激光打标机</td><td class="text-xs text-slate-400">—</td><td><span class="tag t-orange">图片询价 · 中高危</span></td></tr>
+        <tr><td class="font-bold text-red-300">Kimberly campbell</td><td>美国</td><td><span class="tag t-yellow">询盘客户</span></td><td class="text-xs text-slate-400">—</td><td class="text-xs text-slate-400">—</td><td><span class="tag t-red">老客回访 · 最高危</span></td></tr>
+        <tr><td class="font-bold">Atul Jain</td><td>印度</td><td><span class="tag t-yellow">询盘客户</span></td><td class="text-xs text-slate-400">连续激光清洗机</td><td class="text-xs text-slate-400 italic">印度清洗机客户，从未回复</td><td><span class="tag t-orange">中危</span></td></tr>
+        <tr><td class="font-bold">Marc Samson</td><td>菲律宾</td><td><span class="tag t-yellow">询盘客户</span></td><td class="text-xs text-slate-400">—</td><td class="text-xs text-slate-400">—</td><td><span class="tag t-orange">报价后断联</span></td></tr>
+        <tr><td class="font-bold">Nsonebokolo Moniqueeliane</td><td>喀麦隆</td><td><span class="tag t-yellow">询盘客户</span></td><td class="text-xs text-slate-400">—</td><td class="text-xs text-slate-400">—</td><td><span class="tag t-yellow">中危</span></td></tr>
+        <tr><td class="text-slate-500 italic" colspan="6">... 另有 11 条（Hassan Haneef / sam seyfi / Hak Senghoin / moosa ali / Redouane Mouna 等）</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="text-xs text-slate-600 mt-3 pl-2">注：OKKI "印度清洗机客户，从未回复" 的备注直接印证了阿里质检的零沟通标记，两系统数据完全吻合。</p>
+</section>
+
+<!-- OKKI 12个未录入买家 -->
+<section class="mb-10">
+  <div class="mb-5">
+    <span class="sec-bar" style="background:#94a3b8;box-shadow:0 0 6px #94a3b8;"></span>
+    <span class="text-xl font-black text-slate-400">维度⑦ OKKI完全未录入的异常买家（12名）</span>
+  </div>
+  <div class="card p-6">
+    <p class="text-slate-400 text-sm mb-4">以下买家与 Emily 存在明确的 TM 沟通记录（多轮对话、询价、求参数），但在 OKKI 963条客户档案中<strong class="text-red-400">完全查询不到</strong>，属于"客户黑洞"：</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+      <div class="p-3 rounded-xl text-sm" style="background:rgba(148,163,184,.07);border:1px solid rgba(148,163,184,.15);">
+        <div class="font-bold text-slate-200 mb-1">Lorenzo Garcia</div>
+        <div class="text-xs text-slate-500">🇩🇴 多米尼加 · 买家提出4万件激光打标需求，超30天无有效推进，从未建档</div>
+      </div>
+      <div class="p-3 rounded-xl text-sm" style="background:rgba(148,163,184,.07);border:1px solid rgba(148,163,184,.15);">
+        <div class="font-bold text-slate-200 mb-1">Mauchamp Benjamin</div>
+        <div class="text-xs text-slate-500">🇫🇷 法国 · 主动提出寄送样品进行打标测试，是极高意向信号，从未建档</div>
+      </div>
+      <div class="p-3 rounded-xl text-sm" style="background:rgba(148,163,184,.07);border:1px solid rgba(148,163,184,.15);">
+        <div class="font-bold text-slate-200 mb-1">General Starlight Co Inc</div>
+        <div class="text-xs text-slate-500">🇺🇸 美国 · 明确询问30W和50W MOPA报价，公司客户，从未建档</div>
+      </div>
+      <div class="p-3 rounded-xl text-sm" style="background:rgba(148,163,184,.07);border:1px solid rgba(148,163,184,.15);">
+        <div class="font-bold text-slate-200 mb-1">De Cicco Giuseppe</div>
+        <div class="text-xs text-slate-500">🇮🇹 意大利 · 主动留下手机号 +39 339 181 2856，有强烈购买意向，从未建档</div>
+      </div>
+      <div class="p-3 rounded-xl text-sm" style="background:rgba(148,163,184,.07);border:1px solid rgba(148,163,184,.15);">
+        <div class="font-bold text-slate-200 mb-1">Mariel Hernandez</div>
+        <div class="text-xs text-slate-500">🇲🇽 墨西哥 · 已购买客户（发货跟进中），多次催问FedEx进度，OKKI却完全无档</div>
+      </div>
+      <div class="p-3 rounded-xl text-sm" style="background:rgba(148,163,184,.07);border:1px solid rgba(148,163,184,.15);">
+        <div class="font-bold text-slate-200 mb-1">Janosch Schneider</div>
+        <div class="text-xs text-slate-500">🇩🇪 德国 · 技术问题求助（镜头更换），从未建档</div>
+      </div>
+      <div class="p-3 rounded-xl text-sm" style="background:rgba(148,163,184,.07);border:1px solid rgba(148,163,184,.15);">
+        <div class="font-bold text-slate-200 mb-1">alnqash bas</div>
+        <div class="text-xs text-slate-500">🇹🇷 土耳其 · 多次阿拉伯语求规格参数，从未建档</div>
+      </div>
+      <div class="p-3 rounded-xl text-sm" style="background:rgba(148,163,184,.07);border:1px solid rgba(148,163,184,.15);">
+        <div class="font-bold text-slate-200 mb-1">CAM KH / Redouane Mouna</div>
+        <div class="text-xs text-slate-500">🇰🇭🇩🇿 多次互动但无建档记录</div>
+      </div>
+      <div class="p-3 rounded-xl text-sm" style="background:rgba(148,163,184,.07);border:1px solid rgba(148,163,184,.15);">
+        <div class="font-bold text-slate-200 mb-1">Dean P / Magdy Hafez / munashe maziwanhanga</div>
+        <div class="text-xs text-slate-500">🇨🇦🇪🇬🇿🇼 有实质对话，从未建档</div>
+      </div>
+    </div>
+    <div class="mt-4 p-3 rounded-lg text-xs" style="background:rgba(255,51,102,.06);border:1px solid rgba(255,51,102,.2);">
+      ⚠️ 高风险提示：Mariel Hernandez 已是付款客户却无 OKKI 档案，说明李思贤存在严重的"成单不录入"问题，这是最直接的客户资产流失隐患，也可能影响公司对该客户的后续服务追踪。
+    </div>
+  </div>
+</section>
+
+<!-- 成交客户全景（46条） -->
+<section class="mb-10">
+  <div class="mb-5">
+    <span class="sec-bar" style="background:#10b981;box-shadow:0 0 8px #10b981;"></span>
+    <span class="text-xl font-black text-green-400">OKKI 成交客户全景（46条）— 2025.01 至 2026.06</span>
+  </div>
+  <div class="card overflow-hidden">
+    <table>
+      <thead><tr><th>客户名称</th><th>国家</th><th>产品</th><th>创建时间</th><th>OKKI跟进备注</th></tr></thead>
+      <tbody>
+        <tr><td class="font-bold">Torres taller y joyería S.C</td><td>西班牙</td><td class="text-xs text-slate-400">Fiber激光打标机</td><td class="font-mono text-xs">2025-01-05</td><td class="text-xs text-slate-400">售后</td></tr>
+        <tr><td class="font-bold">Andreas Lachanas</td><td>希腊</td><td class="text-xs text-slate-400">Fiber激光打标机</td><td class="font-mono text-xs">2025-01-08</td><td class="text-xs text-slate-400">售后</td></tr>
+        <tr><td class="font-bold">Shae Roberts</td><td>澳大利亚</td><td class="text-xs text-slate-400">连续激光清洗机</td><td class="font-mono text-xs">2025-01-07</td><td class="text-xs text-slate-400 italic">收到了，在测试。会给我反馈</td></tr>
+        <tr><td class="font-bold">NAZCA × 2</td><td>西班牙</td><td class="text-xs text-slate-400">Fiber激光打标机</td><td class="font-mono text-xs">2025-01-24</td><td class="text-xs text-slate-400 italic">打标照片售后已解决</td></tr>
+        <tr><td class="font-bold">Tyler Collier</td><td>美国</td><td class="text-xs text-slate-400">UV激光打标机</td><td class="font-mono text-xs">2025-02-23</td><td class="text-xs text-slate-400 italic">售后。客户收到机器后电动立柱不工作</td></tr>
+        <tr><td class="font-bold">rueben caruana</td><td>马耳他</td><td class="text-xs text-slate-400">连续激光清洗机</td><td class="font-mono text-xs">2025-03-03</td><td class="text-xs text-slate-400 italic">发折扣海报</td></tr>
+        <tr><td class="font-bold">Obras Y Suministros AEA S.A. × 2</td><td>阿根廷</td><td class="text-xs text-slate-400">Fiber激光打标机</td><td class="font-mono text-xs">2025-03-08</td><td class="text-xs text-slate-400 italic">问下客户货代最新进度</td></tr>
+        <tr><td class="font-bold">讲武堂立科技有限公司</td><td>中国</td><td class="text-xs text-slate-400">Fiber激光打标机</td><td class="font-mono text-xs">2025-03-18</td><td class="text-xs text-slate-400 italic">客户一直没回复</td></tr>
+        <tr><td class="font-bold">Paladin Rings × 2</td><td>美国</td><td class="text-xs text-slate-400">Fiber激光打标机</td><td class="font-mono text-xs">2025-03-29</td><td class="text-xs text-red-400 italic">老头，售后很麻烦</td></tr>
+        <tr><td class="font-bold">Erik Kemp</td><td>美国</td><td class="text-xs text-slate-400">Fiber激光打标机</td><td class="font-mono text-xs">2025-04-03</td><td class="text-xs text-slate-400 italic">更新物流信息</td></tr>
+        <tr><td class="font-bold">Ramos × 3</td><td>美国</td><td class="text-xs text-slate-400">Fiber激光打标机</td><td class="font-mono text-xs">2025-04-17</td><td class="text-xs text-slate-400 italic">促销</td></tr>
+        <tr><td class="font-bold">Abimael Mora</td><td>委内瑞拉</td><td class="text-xs text-slate-400">连续激光清洗机</td><td class="font-mono text-xs">2025-04-30</td><td class="text-xs text-slate-400 italic">逾期发货了，但是客户货代不肯提供船运信息</td></tr>
+        <tr><td class="font-bold">SoPheak</td><td>柬埔寨</td><td class="text-xs text-slate-400">UV+Fiber打标机</td><td class="font-mono text-xs">2025-05-24</td><td class="text-xs text-slate-400 italic">下单了</td></tr>
+        <tr><td class="font-bold">Mauro Campana / Rey Calvo</td><td>美国</td><td class="text-xs text-slate-400">Fiber激光打标机</td><td class="font-mono text-xs">2025-05-10~14</td><td class="text-xs text-slate-400 italic">问？ / 更新物流</td></tr>
+        <tr><td class="font-bold">Ariel ghione × 4</td><td>阿根廷</td><td class="text-xs text-slate-400">Fiber激光打标机</td><td class="font-mono text-xs">2025-07-26</td><td class="text-xs text-slate-400 italic">客户的客户想要2.5D加密狗</td></tr>
+        <tr><td class="font-bold">Arroyo Plata</td><td>墨西哥</td><td class="text-xs text-slate-400">Fiber激光打标机</td><td class="font-mono text-xs">2025-07-01</td><td class="text-xs text-slate-400 italic">活动预热</td></tr>
+        <tr><td class="font-bold">Aleksan Hovhannisyan</td><td>亚美尼亚</td><td class="text-xs text-slate-400">Fiber激光打标机</td><td class="font-mono text-xs">2025-08-20</td><td class="text-xs text-slate-400 italic">重新报100W</td></tr>
+        <tr><td class="font-bold">MasBre Channel</td><td>印尼</td><td class="text-xs text-slate-400">Fiber激光打标机</td><td class="font-mono text-xs">2025-09-11</td><td class="text-xs text-yellow-400 italic">售后，客户仓库说没收到机器</td></tr>
+        <tr><td class="font-bold">Kevin Smith</td><td>加拿大</td><td class="text-xs text-slate-400">Fiber激光打标机</td><td class="font-mono text-xs">2025-10-19</td><td class="text-xs text-slate-400 italic">跟进</td></tr>
+        <tr><td class="font-bold">Travolta Chatyoka</td><td>津巴布韦</td><td class="text-xs text-slate-400">Fiber激光打标机</td><td class="font-mono text-xs">2025-10-22</td><td class="text-xs text-slate-400 italic">老客户折扣</td></tr>
+        <tr><td class="font-bold">crafts</td><td>美国</td><td class="text-xs text-slate-400">Fiber激光打标机</td><td class="font-mono text-xs">2025-10-05</td><td class="text-xs text-slate-400 italic">已解决</td></tr>
+        <tr><td class="font-bold">ivo chavorski</td><td>保加利亚</td><td class="text-xs text-slate-400">Fiber激光打标机</td><td class="font-mono text-xs">2025-12-30</td><td class="text-xs text-slate-400 italic">跟进</td></tr>
+        <tr><td class="font-bold">Aurel Schulz</td><td>德国</td><td class="text-xs text-slate-400">脉冲激光清洗机</td><td class="font-mono text-xs">2026-01-16</td><td class="text-xs text-red-400 italic">客户收到配件（但仍发出紧急求助被忽视）</td></tr>
+        <tr><td class="font-bold">Gomisteri pellumbi</td><td>美国</td><td class="text-xs text-slate-400">连续激光清洗机</td><td class="font-mono text-xs">2026-02-20</td><td class="text-xs text-slate-400 italic">折扣</td></tr>
+        <tr><td class="font-bold">Ruslan.</td><td>乌克兰</td><td class="text-xs text-slate-400">Fiber激光打标机</td><td class="font-mono text-xs">2026-02-05</td><td class="text-xs text-slate-400 italic">问还要不要机器</td></tr>
+        <tr><td class="font-bold">Charena</td><td>菲律宾</td><td class="text-xs text-slate-400">Fiber激光打标机</td><td class="font-mono text-xs">2026-03-04</td><td class="text-xs text-slate-500 italic">（无跟进备注）</td></tr>
+        <tr><td class="font-bold text-red-300">Fabian Casanova</td><td>智利</td><td class="text-xs text-slate-400">连续激光清洗机</td><td class="font-mono text-xs">2026-04-02</td><td class="text-xs text-red-400 italic">原产地证确认（成交后仍多次超时）</td></tr>
+        <tr><td class="font-bold">particular_120485834173</td><td>西班牙</td><td class="text-xs text-slate-400">连续激光清洗机</td><td class="font-mono text-xs">2026-05-08</td><td class="text-xs text-slate-400 italic">跟进</td></tr>
+        <tr><td class="text-slate-500 italic" colspan="5">... 另有 User name_120255763118 × 3（中国/UV）、Manul Corp × 2（捷克）、Zhejiang Neoden等其余条目</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 截流/撞单 -->
+<section class="mb-10">
+  <div class="mb-5">
+    <span class="sec-bar" style="background:#facc15;box-shadow:0 0 8px #facc15;"></span>
+    <span class="text-xl font-black text-yellow-300">维度④ 截流/撞单实证（Emily接待 → 他人成交）</span>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div class="card p-5" style="border-color:rgba(250,204,21,.25);">
+      <div class="flex justify-between mb-3"><span class="font-black text-slate-100">Ezequiel Silveira</span><span class="tag t-red">已确认</span></div>
+      <div class="text-xs text-slate-500 mb-3">🇺🇾 乌拉圭</div>
+      <div class="bubble-b">"Cuál sería el costo de la máquina?"</div>
+      <div class="bubble-b">"Cuál sería el costo de la máquina?" (第2次)</div>
+      <div class="text-xs text-yellow-400 mt-2">→ Emily 已读未回 → <strong>James Chen</strong> 成交（4笔订单）</div>
+      <div class="text-xs text-slate-600 mt-1">OKKI阶段：询盘客户</div>
+    </div>
+    <div class="card p-5" style="border-color:rgba(250,204,21,.25);">
+      <div class="flex justify-between mb-3"><span class="font-black text-slate-100">Ralph Dematteo</span><span class="tag t-red">已确认</span></div>
+      <div class="text-xs text-slate-500 mb-3">🇺🇸 美国</div>
+      <div class="bubble-b">"Yea i figured it would be more."</div>
+      <div class="text-xs text-yellow-400 mt-2">→ Emily 敷衍后断线 → <strong>BY Laser</strong> 成交</div>
+      <div class="text-xs text-slate-600 mt-1">订单号：305348159501025540 | OKKI未录入</div>
+    </div>
+    <div class="card p-5" style="border-color:rgba(250,204,21,.25);">
+      <div class="flex justify-between mb-3"><span class="font-black text-slate-100">jesus egea conesa</span><span class="tag t-yellow">已确认</span></div>
+      <div class="text-xs text-slate-500 mb-3">🇪🇸 西班牙</div>
+      <div class="bubble-b">询价沟通中</div>
+      <div class="bubble-e">"Okk"（Emily回复）</div>
+      <div class="text-xs text-yellow-400 mt-2">→ 断线 → <strong>BY Laser</strong> 成交</div>
+      <div class="text-xs text-slate-600 mt-1">订单号：24612624501043836 | OKKI未录入</div>
+    </div>
+  </div>
+</section>
+
+<!-- 贾总处方 -->
+<section class="mb-10">
+  <div class="mb-5">
+    <span class="sec-bar" style="background:#00c8ff;box-shadow:0 0 8px #00c8ff;"></span>
+    <span class="text-xl font-black" style="color:#00c8ff;">贾总决策处方（基于963条OKKI + 阿里全量对撞结果）</span>
+  </div>
+  <div class="card p-8" style="background:linear-gradient(135deg,rgba(0,200,255,.04),rgba(14,20,40,.95));">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+      <div>
+        <div class="text-red-400 font-black text-sm mb-3 uppercase tracking-wider flex items-center gap-2"><i class="fas fa-fire"></i> 立即执行（本周内）</div>
+        <div class="space-y-3 text-sm text-slate-400">
+          <div class="flex gap-3"><span class="text-red-400 font-black">01</span><span>对已录入 OKKI 的 <strong class="text-white">16 条"询盘客户+零回复"</strong>进行二次分配，立即由其他业务员激活跟进。</span></div>
+          <div class="flex gap-3"><span class="text-red-400 font-black">02</span><span><strong class="text-white">Kimberly Campbell</strong> 立即由组长接管，补救"长期供应商合作"意向，该商机当前标记为 Lost Opportunity 但尚可挽回。</span></div>
+          <div class="flex gap-3"><span class="text-red-400 font-black">03</span><span><strong class="text-white">12 名 OKKI 未录入的异常买家</strong>需立即补录（含已成交的 Mariel Hernandez），防止售后断档。</span></div>
+          <div class="flex gap-3"><span class="text-red-400 font-black">04</span><span>对 Ralph Dematteo / Ezequiel Silveira / jesus egea conesa 三宗<strong class="text-white">截流案例</strong>要求 Emily 书面复盘，明确责任。</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="text-yellow-400 font-black text-sm mb-3 uppercase tracking-wider flex items-center gap-2"><i class="fas fa-tools"></i> 本月机制优化</div>
+        <div class="space-y-3 text-sm text-slate-400">
+          <div class="flex gap-3"><span class="text-yellow-400 font-black">05</span><span>强制规定：<strong class="text-white">TM 沟通超过 3 轮</strong>必须在 OKKI 建档；成交后 48h 内必须创建商机并更新物流备注。</span></div>
+          <div class="flex gap-3"><span class="text-yellow-400 font-black">06</span><span>L3/L4 买家或<strong class="text-white">首次询价消息</strong>：4h 内响应，否则系统自动预警给组长。</span></div>
+          <div class="flex gap-3"><span class="text-yellow-400 font-black">07</span><span>已成交客户的售后消息：<strong class="text-white">2h 内响应红线</strong>，违反一次记录绩效。</span></div>
+          <div class="flex gap-3"><span class="text-yellow-400 font-black">08</span><span>875条"询盘+长期跟进"客户（436+375）中尚有大量未转化的潜力，建议安排<strong class="text-white">季度客户盘点</strong>，由全组协同激活。</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="p-5 rounded-2xl" style="background:rgba(255,51,102,.06);border:1px solid rgba(255,51,102,.2);">
+      <p class="text-sm text-slate-300 leading-relaxed italic">"963 条 OKKI 客户记录全部为李思贤创建——这证明她并不懒，她建档积极，接触面广。但 4.8% 的成交率（vs James Chen 的 19.23%）、12 名已深度沟通但从未建档的买家、5 名成交客户仍出现在响应异常列表中……数据指向的不是努力问题，而是<strong class="text-red-400">转化能力和客户管理能力</strong>的系统性缺失。换句话说：她能把客户找来，但不会把客户留住和促成交。这是培训和机制能解决的问题，而不只是绩效惩罚。"</p>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-slate-800 pt-8 text-center text-slate-700 text-xs">
+  <p>铁血询盘诊断系统 V7.0 Final | 洛阳冰岩激光设备有限公司 · 内部专项审计</p>
+  <p class="mt-1">数据来源：OKKI CRM 导出（963条）× 阿里国际站质检接口 × 全店成交订单系统 | 生成时间：2026-06-26</p>
+</footer>
+</div>
+</body>
+</html>
